@@ -394,6 +394,22 @@
     [
       "d0ac005f-caac-4a17-bc1d-5f52781e91da",
       "GPS"
+    ],
+    [
+      "4c18d891-44a5-41ab-9141-17f4525bee9f",
+      "SD_Card"
+    ],
+    [
+      "26a5e7cd-49ee-4cdb-bd4b-2b9c2e5ea1b7",
+      "Power"
+    ],
+    [
+      "b8350d3f-b373-4dd1-a1a4-91efa3226b27",
+      "eInk Display"
+    ],
+    [
+      "dcbcf723-f7ed-4082-a41f-9f6fc76b941a",
+      "HMI"
     ]
   ],
   "text_variables": {}

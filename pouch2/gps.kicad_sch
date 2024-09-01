@@ -11,6 +11,231 @@
 		(comment 2 "Author: Leon Schnieber")
 	)
 	(lib_symbols
+		(symbol "DEBO_GPS_1"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 2.794 -0.508 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "DEBO_GPS_1_0_1"
+				(rectangle
+					(start -6.35 25.4)
+					(end 6.35 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "DEBO_GPS_1_1_1"
+				(pin power_out line
+					(at 3.81 30.48 270)
+					(length 5.08)
+					(name "3.3V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 7.62 0)
+					(length 5.08)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at -11.43 16.51 0)
+					(length 5.08)
+					(name "VBAT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 11.43 17.78 180)
+					(length 5.08)
+					(name "FIX"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 11.43 8.89 180)
+					(length 5.08)
+					(name "TX"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 6.35 180)
+					(length 5.08)
+					(name "RX"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -3.81 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -3.81 30.48 270)
+					(length 5.08)
+					(name "VIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 11.43 15.24 180)
+					(length 5.08)
+					(name "PPS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:R"
 			(pin_numbers hide)
 			(pin_names
@@ -132,218 +357,6 @@
 				)
 			)
 		)
-		(symbol "SensorBoards:DEBO_GPS"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "DEBO_GPS_1_1"
-				(pin power_out line
-					(at 0 31.75 180)
-					(length 5.08)
-					(name "3.3V"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 0 29.21 180)
-					(length 5.08)
-					(name "EN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 26.67 180)
-					(length 5.08)
-					(name "VBAT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 0 24.13 180)
-					(length 5.08)
-					(name "FIX"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 0 21.59 180)
-					(length 5.08)
-					(name "TX"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 0 19.05 180)
-					(length 5.08)
-					(name "RX"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 16.51 180)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 13.97 180)
-					(length 5.08)
-					(name "VIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 0 11.43 180)
-					(length 5.08)
-					(name "PPS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "power:GND"
 			(power)
 			(pin_names
@@ -442,114 +455,44 @@
 		)
 	)
 	(junction
-		(at 198.12 60.96)
+		(at 154.94 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "df29a00b-ce29-4658-9ad7-0811f489025d")
+		(uuid "4070aea5-8805-41ed-9677-6245d8434dc6")
 	)
 	(wire
 		(pts
-			(xy 184.15 73.66) (xy 184.15 82.55)
+			(xy 154.94 46.99) (xy 198.12 46.99)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0977dae2-5401-40bd-a701-141b3bb48f1b")
+		(uuid "148b3828-f285-44f2-a639-ff3cac6e4b2d")
 	)
 	(wire
 		(pts
-			(xy 198.12 76.2) (xy 181.61 76.2)
+			(xy 182.88 67.31) (xy 182.88 74.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0bc675bd-f1fe-484f-ad66-34cb4955231f")
+		(uuid "18931cf1-9c70-4f2e-b33b-089f680ca947")
 	)
 	(wire
 		(pts
-			(xy 198.12 46.99) (xy 198.12 60.96)
+			(xy 158.75 87.63) (xy 158.75 93.98)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1c81b645-9e52-4120-9151-308d904c1adb")
+		(uuid "2b22d6c2-10d8-4ab3-99e3-3574b852cf84")
 	)
 	(wire
 		(pts
-			(xy 203.2 78.74) (xy 203.2 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1fb75fcf-2134-493a-bff9-5191e3298fc5")
-	)
-	(wire
-		(pts
-			(xy 181.61 73.66) (xy 184.15 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3219ace7-7f35-4fbf-9889-34575c8ff187")
-	)
-	(wire
-		(pts
-			(xy 203.2 63.5) (xy 203.2 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "41425be5-1ad5-41dc-a2ad-e9c7ee8b7869")
-	)
-	(wire
-		(pts
-			(xy 203.2 63.5) (xy 209.55 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "530363aa-2bab-4432-bc0d-7fd595561021")
-	)
-	(wire
-		(pts
-			(xy 181.61 78.74) (xy 203.2 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "55bd6b2b-69b9-4f17-bb24-a6773d61b019")
-	)
-	(wire
-		(pts
-			(xy 198.12 60.96) (xy 198.12 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5dd403a0-a280-4a0b-a2f8-b184ad95b6ac")
-	)
-	(wire
-		(pts
-			(xy 200.66 57.15) (xy 200.66 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7321b2c6-d0d3-43e4-8ac8-b38117fbf518")
-	)
-	(wire
-		(pts
-			(xy 194.31 60.96) (xy 198.12 60.96)
+			(xy 148.59 46.99) (xy 154.94 46.99)
 		)
 		(stroke
 			(width 0)
@@ -559,27 +502,47 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 71.12) (xy 181.61 71.12)
+			(xy 170.18 77.47) (xy 184.15 77.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8a3c36f6-1675-46d2-902e-8d83550e364d")
+		(uuid "9043f60d-902b-49fb-88e6-8bad848d0a67")
 	)
 	(wire
 		(pts
-			(xy 203.2 82.55) (xy 223.52 82.55)
+			(xy 170.18 68.58) (xy 175.26 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9e7a19d0-bfcb-4213-a439-be1748af050d")
+		(uuid "94248f6e-86a9-44f9-b27d-5f407365cf49")
 	)
 	(wire
 		(pts
-			(xy 223.52 63.5) (xy 217.17 63.5)
+			(xy 154.94 46.99) (xy 154.94 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99b8ba08-083e-46eb-bfcd-0bd047ca5a03")
+	)
+	(wire
+		(pts
+			(xy 140.97 76.2) (xy 147.32 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a374a9e-0388-4585-b6b4-a8f874843e09")
+	)
+	(wire
+		(pts
+			(xy 198.12 67.31) (xy 191.77 67.31)
 		)
 		(stroke
 			(width 0)
@@ -589,77 +552,37 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 57.15) (xy 200.66 57.15)
+			(xy 182.88 67.31) (xy 184.15 67.31)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a3d8f3fd-4d27-46a7-bdc1-73db2dd09ab8")
+		(uuid "b65d8d83-6194-41e8-921c-6019226f820f")
 	)
 	(wire
 		(pts
-			(xy 203.2 73.66) (xy 203.2 71.12)
+			(xy 170.18 66.04) (xy 175.26 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a7fc03e2-db0e-4cde-8791-5e497029c923")
+		(uuid "ce2f0022-1be8-41d4-a120-0c75f431b5d3")
 	)
 	(wire
 		(pts
-			(xy 203.2 73.66) (xy 209.55 73.66)
+			(xy 170.18 74.93) (xy 182.88 74.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b2941a72-c66f-41c4-a817-d725d2441363")
+		(uuid "cff76b20-5578-4d47-98ed-d0c9330e8f5a")
 	)
 	(wire
 		(pts
-			(xy 203.2 68.58) (xy 181.61 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cca073c1-56c1-4415-b43c-fe24697c009b")
-	)
-	(wire
-		(pts
-			(xy 181.61 60.96) (xy 186.69 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cfd13b15-bc56-4b96-862d-573a31274ba6")
-	)
-	(wire
-		(pts
-			(xy 223.52 46.99) (xy 198.12 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dacda1de-33fb-4f59-a133-9aab970fd26c")
-	)
-	(wire
-		(pts
-			(xy 200.66 66.04) (xy 181.61 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e3ee5ed9-7bcd-4240-8321-7e9840313436")
-	)
-	(wire
-		(pts
-			(xy 223.52 73.66) (xy 217.17 73.66)
+			(xy 198.12 77.47) (xy 191.77 77.47)
 		)
 		(stroke
 			(width 0)
@@ -667,9 +590,19 @@
 		)
 		(uuid "ed0ff518-ac77-4fc5-8460-74397f636749")
 	)
+	(wire
+		(pts
+			(xy 140.97 46.99) (xy 140.97 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fde86aa9-3e02-4271-90ea-642e36f99c6c")
+	)
 	(hierarchical_label "FIX"
 		(shape output)
-		(at 223.52 57.15 0)
+		(at 175.26 66.04 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -681,7 +614,7 @@
 	)
 	(hierarchical_label "TX"
 		(shape bidirectional)
-		(at 223.52 63.5 0)
+		(at 198.12 67.31 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -693,7 +626,7 @@
 	)
 	(hierarchical_label "RX"
 		(shape bidirectional)
-		(at 223.52 73.66 0)
+		(at 198.12 77.47 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -705,7 +638,7 @@
 	)
 	(hierarchical_label "PPS"
 		(shape output)
-		(at 223.52 82.55 0)
+		(at 175.26 68.58 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -717,7 +650,7 @@
 	)
 	(hierarchical_label "VCC"
 		(shape input)
-		(at 223.52 46.99 0)
+		(at 198.12 46.99 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -729,7 +662,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 213.36 63.5 270)
+		(at 187.96 67.31 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -738,7 +671,7 @@
 		(fields_autoplaced yes)
 		(uuid "06cdefa5-70fa-436f-bbbf-702ed32f662b")
 		(property "Reference" "R14"
-			(at 213.36 69.85 90)
+			(at 187.96 73.66 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -746,7 +679,7 @@
 			)
 		)
 		(property "Value" "0"
-			(at 213.36 67.31 90)
+			(at 187.96 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -754,7 +687,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 213.36 61.722 90)
+			(at 187.96 65.532 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -763,7 +696,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 213.36 63.5 0)
+			(at 187.96 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -772,7 +705,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 213.36 63.5 0)
+			(at 187.96 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -796,97 +729,8 @@
 		)
 	)
 	(symbol
-		(lib_id "SensorBoards:DEBO_GPS")
-		(at 181.61 90.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2d2b9a2e-e70b-4781-8fbe-f584e134add7")
-		(property "Reference" "U4"
-			(at 176.53 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "~"
-			(at 176.53 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 181.61 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 181.61 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 181.61 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "e7de7be5-e48a-4512-a017-bbccbbe5c481")
-		)
-		(pin "3"
-			(uuid "3ff68fa6-bede-4fdb-a3d1-28a0f1dffa43")
-		)
-		(pin "2"
-			(uuid "ab1876d7-c254-44c6-a029-3e05cfc2f1a8")
-		)
-		(pin "1"
-			(uuid "dfdd152f-693f-490c-90d5-b4216c0d6a91")
-		)
-		(pin "5"
-			(uuid "a9341c51-c421-4edc-b20b-5417d67a8405")
-		)
-		(pin "8"
-			(uuid "e889e680-c320-4dad-9fbf-e8e47b848931")
-		)
-		(pin "6"
-			(uuid "4af207cf-d84c-4b57-ba36-e338a3e99c55")
-		)
-		(pin "7"
-			(uuid "61ffbf61-71e0-4e68-aad3-169c9aace818")
-		)
-		(pin "9"
-			(uuid "63d5d469-d298-432f-bf40-38c66ce3d98f")
-		)
-		(instances
-			(project ""
-				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/d0ac005f-caac-4a17-bc1d-5f52781e91da"
-					(reference "U4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
-		(at 184.15 82.55 0)
+		(at 158.75 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -895,7 +739,7 @@
 		(fields_autoplaced yes)
 		(uuid "44d71f11-a34b-464b-81d0-f0bd67425fcc")
 		(property "Reference" "#PWR013"
-			(at 184.15 88.9 0)
+			(at 158.75 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -904,7 +748,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 184.15 87.63 0)
+			(at 158.75 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -912,7 +756,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 184.15 82.55 0)
+			(at 158.75 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -921,7 +765,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 184.15 82.55 0)
+			(at 158.75 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -930,7 +774,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 184.15 82.55 0)
+			(at 158.75 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -952,7 +796,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 190.5 60.96 90)
+		(at 144.78 46.99 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -961,7 +805,7 @@
 		(fields_autoplaced yes)
 		(uuid "54505ce4-787d-4403-a713-3bf1151e045b")
 		(property "Reference" "R16"
-			(at 190.5 54.61 90)
+			(at 144.78 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -969,7 +813,7 @@
 			)
 		)
 		(property "Value" "22k"
-			(at 190.5 57.15 90)
+			(at 144.78 43.18 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -977,7 +821,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 190.5 62.738 90)
+			(at 144.78 48.768 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -986,7 +830,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 190.5 60.96 0)
+			(at 144.78 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -995,7 +839,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 190.5 60.96 0)
+			(at 144.78 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1019,8 +863,100 @@
 		)
 	)
 	(symbol
+		(lib_name "DEBO_GPS_1")
+		(lib_id "SensorBoards:DEBO_GPS")
+		(at 158.75 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8edac87b-c46b-404d-a912-c00892379074")
+		(property "Reference" "U5"
+			(at 160.9441 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 160.9441 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 158.75 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 158.75 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 158.75 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "8"
+			(uuid "2df57809-0eaf-4805-9332-ce880ec2f5f4")
+		)
+		(pin "5"
+			(uuid "70f7b978-2787-45df-a13c-ab20446afe3b")
+		)
+		(pin "3"
+			(uuid "8a2cad40-20e5-4f06-be21-9759b0c2324b")
+		)
+		(pin "2"
+			(uuid "9398b5e7-ec98-47a3-994a-06041b218269")
+		)
+		(pin "1"
+			(uuid "272fba9b-25cc-4801-9968-4d1cf183e975")
+		)
+		(pin "6"
+			(uuid "36eceecb-00c8-49ea-a7cd-c9a3f3ad08ac")
+		)
+		(pin "4"
+			(uuid "76df1f2e-1994-42b4-a3bb-05ef3460bee2")
+		)
+		(pin "7"
+			(uuid "ae2cd41e-0435-42dc-ae04-7fc6f873a732")
+		)
+		(pin "9"
+			(uuid "79582e28-946a-4a63-a900-23c3a4404c33")
+		)
+		(instances
+			(project ""
+				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/d0ac005f-caac-4a17-bc1d-5f52781e91da"
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
-		(at 213.36 73.66 90)
+		(at 187.96 77.47 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1029,7 +965,7 @@
 		(fields_autoplaced yes)
 		(uuid "fa4328c1-9a6b-40a7-9706-bbc542a9ec95")
 		(property "Reference" "R15"
-			(at 213.36 80.01 90)
+			(at 187.96 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1037,7 +973,7 @@
 			)
 		)
 		(property "Value" "0"
-			(at 213.36 77.47 90)
+			(at 187.96 81.28 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1045,7 +981,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 213.36 75.438 90)
+			(at 187.96 79.248 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1054,7 +990,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 213.36 73.66 0)
+			(at 187.96 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1063,7 +999,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 213.36 73.66 0)
+			(at 187.96 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
