@@ -602,22 +602,22 @@
 				)
 			)
 		)
-		(symbol "Switch:SW_SPDT"
+		(symbol "Switch:SW_SPST"
 			(pin_names
 				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "SW"
-				(at 0 4.318 0)
+				(at 0 3.175 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "SW_SPDT"
-				(at 0 -5.08 0)
+			(property "Value" "SW_SPST"
+				(at 0 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -642,7 +642,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Switch, single pole double throw"
+			(property "Description" "Single Pole Single Throw (SPST) switch"
 				(at 0 0 0)
 				(effects
 					(font
@@ -651,7 +651,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "switch single-pole double-throw spdt ON-ON"
+			(property "ki_keywords" "switch lever"
 				(at 0 0 0)
 				(effects
 					(font
@@ -660,7 +660,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "SW_SPDT_0_0"
+			(symbol "SW_SPST_0_0"
 				(circle
 					(center -2.032 0)
 					(radius 0.508)
@@ -672,22 +672,9 @@
 						(type none)
 					)
 				)
-				(circle
-					(center 2.032 -2.54)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SW_SPDT_0_1"
 				(polyline
 					(pts
-						(xy -1.524 0.254) (xy 1.651 2.286)
+						(xy -1.524 0.254) (xy 1.524 1.778)
 					)
 					(stroke
 						(width 0)
@@ -698,7 +685,7 @@
 					)
 				)
 				(circle
-					(center 2.032 2.54)
+					(center 2.032 0)
 					(radius 0.508)
 					(stroke
 						(width 0)
@@ -709,9 +696,9 @@
 					)
 				)
 			)
-			(symbol "SW_SPDT_1_1"
+			(symbol "SW_SPST_1_1"
 				(pin passive line
-					(at 5.08 2.54 180)
+					(at -5.08 0 0)
 					(length 2.54)
 					(name "A"
 						(effects
@@ -729,7 +716,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at 5.08 0 180)
 					(length 2.54)
 					(name "B"
 						(effects
@@ -739,24 +726,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -2.54 180)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1620,7 +1589,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 71.12) (xy 127 74.93)
+			(xy 127 68.58) (xy 127 74.93)
 		)
 		(stroke
 			(width 0)
@@ -1960,16 +1929,6 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 68.58) (xy 129.54 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9ac0651e-4162-4eaa-8884-cb83aa923aa9")
-	)
-	(wire
-		(pts
 			(xy 46.99 128.27) (xy 55.88 128.27)
 		)
 		(stroke
@@ -2200,16 +2159,6 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 71.12) (xy 127 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d88db067-0a15-46d1-9121-4a129e05734b")
-	)
-	(wire
-		(pts
 			(xy 46.99 135.89) (xy 46.99 137.16)
 		)
 		(stroke
@@ -2425,7 +2374,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
 			(at 41.91 138.938 90)
 			(effects
 				(font
@@ -2560,7 +2509,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal"
 			(at 76.2 72.39 0)
 			(effects
 				(font
@@ -2715,7 +2664,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Fuse:Fuse_BelFuse_0ZRE0005FF_L8.3mm_W3.8mm"
 			(at 128.27 83.82 0)
 			(effects
 				(font
@@ -2784,7 +2733,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
 			(at 41.91 77.978 90)
 			(effects
 				(font
@@ -2854,7 +2803,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
 			(at 107.442 27.94 90)
 			(effects
 				(font
@@ -2924,7 +2873,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal"
 			(at 76.2 102.87 0)
 			(effects
 				(font
@@ -3077,7 +3026,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
 			(at 41.91 108.458 90)
 			(effects
 				(font
@@ -3283,7 +3232,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
 			(at 48.768 101.6 90)
 			(effects
 				(font
@@ -3504,7 +3453,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
 			(at 48.768 40.64 90)
 			(effects
 				(font
@@ -3572,7 +3521,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
 			(at 41.91 47.498 90)
 			(effects
 				(font
@@ -3642,7 +3591,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal"
 			(at 76.2 41.91 0)
 			(effects
 				(font
@@ -3712,7 +3661,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
 			(at 48.768 71.12 90)
 			(effects
 				(font
@@ -3782,7 +3731,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
 			(at 48.768 132.08 90)
 			(effects
 				(font
@@ -3891,7 +3840,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_SPDT")
+		(lib_id "Switch:SW_SPST")
 		(at 127 63.5 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3901,7 +3850,7 @@
 		(fields_autoplaced yes)
 		(uuid "e12b330e-affa-4981-be45-81d39ab6caf7")
 		(property "Reference" "SW1"
-			(at 130.81 62.2299 90)
+			(at 129.54 62.2299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3910,7 +3859,7 @@
 			)
 		)
 		(property "Value" "SW_SPDT"
-			(at 130.81 64.7699 90)
+			(at 129.54 64.7699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3918,7 +3867,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal"
 			(at 127 63.5 0)
 			(effects
 				(font
@@ -3936,7 +3885,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Switch, single pole double throw"
+		(property "Description" "Single Pole Single Throw (SPST) switch"
 			(at 127 63.5 0)
 			(effects
 				(font
@@ -3947,9 +3896,6 @@
 		)
 		(pin "1"
 			(uuid "43f586be-0d1d-4a11-9cd6-080925dcad7e")
-		)
-		(pin "3"
-			(uuid "9d608f74-dcf3-40c0-9077-98c0497a0643")
 		)
 		(pin "2"
 			(uuid "cc8188bb-dfff-4f0e-84ea-1acdc4f7f7e2")
@@ -4075,7 +4021,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal"
 			(at 76.2 133.35 0)
 			(effects
 				(font
