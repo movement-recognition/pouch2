@@ -5692,7 +5692,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Module:Raspberry_Pi_Zero_Socketed_THT_FaceDown_MountingHoles"
+		(property "Footprint" "SensorBoards:Raspberry_Pi_Zero_Socket_wo_drills"
 			(at 180.34 66.04 0)
 			(effects
 				(font

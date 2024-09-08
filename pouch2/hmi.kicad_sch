@@ -1997,16 +1997,6 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 128.27) (xy 271.78 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0f5e236a-c07b-4ae6-b7fb-d2adc0c0045b")
-	)
-	(wire
-		(pts
 			(xy 31.75 45.72) (xy 31.75 48.26)
 		)
 		(stroke
@@ -2184,6 +2174,16 @@
 			(type default)
 		)
 		(uuid "662e9e02-2aba-46ad-bf45-5043c9a8a2c2")
+	)
+	(wire
+		(pts
+			(xy 273.05 125.73) (xy 273.05 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66a4332a-1d1b-4587-93ad-1fba8af830bf")
 	)
 	(wire
 		(pts
@@ -2387,7 +2387,7 @@
 	)
 	(wire
 		(pts
-			(xy 257.81 128.27) (xy 271.78 128.27)
+			(xy 257.81 128.27) (xy 273.05 128.27)
 		)
 		(stroke
 			(width 0)
@@ -3955,7 +3955,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-16_W7.62mm"
+		(property "Footprint" "Button_Switch_THT:SW_DIP_SPSTx08_Slide_9.78x22.5mm_W7.62mm_P2.54mm"
 			(at 45.72 55.88 0)
 			(effects
 				(font
