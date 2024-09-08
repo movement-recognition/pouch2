@@ -2713,7 +2713,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "07408657-f15d-43cf-94d3-91a80a28e2c4")
-		(property "Reference" "R36"
+		(property "Reference" "R701"
 			(at 59.69 104.14 90)
 			(effects
 				(font
@@ -2729,7 +2729,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 59.69 112.268 90)
 			(effects
 				(font
@@ -2765,7 +2765,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "R36")
+					(reference "R701")
 					(unit 1)
 				)
 			)
@@ -2781,7 +2781,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0b1a35f7-5ca2-41fe-9f89-71ed8a8607c9")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR0703"
 			(at 96.52 71.12 0)
 			(effects
 				(font
@@ -2831,7 +2831,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "#PWR027")
+					(reference "#PWR0703")
 					(unit 1)
 				)
 			)
@@ -2847,7 +2847,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "14e29d86-92bb-421a-bda9-fa88834ba9b7")
-		(property "Reference" "R43"
+		(property "Reference" "R704"
 			(at 87.63 16.51 90)
 			(effects
 				(font
@@ -2863,7 +2863,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 87.63 24.638 90)
 			(effects
 				(font
@@ -2899,7 +2899,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "R43")
+					(reference "R704")
 					(unit 1)
 				)
 			)
@@ -2915,7 +2915,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1c6508b8-3e97-4a4f-b322-b6fd71182ab4")
-		(property "Reference" "R40"
+		(property "Reference" "R707"
 			(at 87.63 46.99 90)
 			(effects
 				(font
@@ -2931,7 +2931,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 87.63 55.118 90)
 			(effects
 				(font
@@ -2967,7 +2967,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "R40")
+					(reference "R707")
 					(unit 1)
 				)
 			)
@@ -2983,7 +2983,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2bcf47a5-2cc4-4c9f-a2d5-0e0a8fffa08e")
-		(property "Reference" "D2"
+		(property "Reference" "D702"
 			(at 72.7075 115.57 0)
 			(effects
 				(font
@@ -2999,7 +2999,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 71.12 123.19 0)
 			(effects
 				(font
@@ -3035,7 +3035,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "D2")
+					(reference "D702")
 					(unit 1)
 				)
 			)
@@ -3051,7 +3051,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2f990724-715c-4d1f-8448-c3a2c64985c5")
-		(property "Reference" "J5"
+		(property "Reference" "J705"
 			(at 220.345 87.63 0)
 			(effects
 				(font
@@ -3067,7 +3067,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical"
 			(at 219.71 107.95 0)
 			(effects
 				(font
@@ -3139,7 +3139,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "J5")
+					(reference "J705")
 					(unit 1)
 				)
 			)
@@ -3155,7 +3155,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "31eece43-0a9e-4c31-992e-291b96fca6e3")
-		(property "Reference" "J2"
+		(property "Reference" "J702"
 			(at 173.355 87.63 0)
 			(effects
 				(font
@@ -3171,7 +3171,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical"
 			(at 172.72 107.95 0)
 			(effects
 				(font
@@ -3243,7 +3243,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "J2")
+					(reference "J702")
 					(unit 1)
 				)
 			)
@@ -3259,7 +3259,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3ac0bc16-0418-48ba-9acd-a123ebf2013a")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR0701"
 			(at 31.75 41.91 0)
 			(effects
 				(font
@@ -3309,7 +3309,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "#PWR026")
+					(reference "#PWR0701")
 					(unit 1)
 				)
 			)
@@ -3325,7 +3325,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3e46b16f-bfa4-44dc-983b-c9d27b1311c4")
-		(property "Reference" "#PWR029"
+		(property "Reference" "#PWR0705"
 			(at 162.56 137.16 0)
 			(effects
 				(font
@@ -3375,7 +3375,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "#PWR029")
+					(reference "#PWR0705")
 					(unit 1)
 				)
 			)
@@ -3391,7 +3391,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "492d32cc-06e4-4cfd-9bd9-5138cbc3f282")
-		(property "Reference" "D3"
+		(property "Reference" "D703"
 			(at 72.7075 128.27 0)
 			(effects
 				(font
@@ -3407,7 +3407,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 71.12 135.89 0)
 			(effects
 				(font
@@ -3443,7 +3443,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "D3")
+					(reference "D703")
 					(unit 1)
 				)
 			)
@@ -3459,7 +3459,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5284a3b9-8189-418a-8dcf-40f11ba7d6da")
-		(property "Reference" "R42"
+		(property "Reference" "R705"
 			(at 87.63 26.67 90)
 			(effects
 				(font
@@ -3475,7 +3475,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 87.63 34.798 90)
 			(effects
 				(font
@@ -3511,7 +3511,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "R42")
+					(reference "R705")
 					(unit 1)
 				)
 			)
@@ -3527,7 +3527,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "54a61543-0c08-4e7b-90da-06df56791927")
-		(property "Reference" "R41"
+		(property "Reference" "R706"
 			(at 87.63 36.83 90)
 			(effects
 				(font
@@ -3543,7 +3543,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 87.63 44.958 90)
 			(effects
 				(font
@@ -3579,7 +3579,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "R41")
+					(reference "R706")
 					(unit 1)
 				)
 			)
@@ -3595,7 +3595,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "65c22d9b-f68d-4f4c-acfa-bac3a1aea2c4")
-		(property "Reference" "J7"
+		(property "Reference" "J707"
 			(at 253.365 87.63 0)
 			(effects
 				(font
@@ -3611,7 +3611,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical"
 			(at 252.73 107.95 0)
 			(effects
 				(font
@@ -3683,7 +3683,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "J7")
+					(reference "J707")
 					(unit 1)
 				)
 			)
@@ -3699,7 +3699,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "80c9b2ae-08fa-429e-bbf8-600caf6d33fa")
-		(property "Reference" "J1"
+		(property "Reference" "J701"
 			(at 158.115 87.63 0)
 			(effects
 				(font
@@ -3715,7 +3715,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical"
 			(at 157.48 107.95 0)
 			(effects
 				(font
@@ -3787,7 +3787,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "J1")
+					(reference "J701")
 					(unit 1)
 				)
 			)
@@ -3803,7 +3803,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "84240158-399f-4bcb-bbb3-aca24efa145e")
-		(property "Reference" "D1"
+		(property "Reference" "D701"
 			(at 72.7075 102.87 0)
 			(effects
 				(font
@@ -3819,7 +3819,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 71.12 110.49 0)
 			(effects
 				(font
@@ -3855,7 +3855,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "D1")
+					(reference "D701")
 					(unit 1)
 				)
 			)
@@ -3871,7 +3871,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "85797270-dea7-4559-b055-be30d4f6510b")
-		(property "Reference" "R38"
+		(property "Reference" "R703"
 			(at 59.69 129.54 90)
 			(effects
 				(font
@@ -3887,7 +3887,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 59.69 137.668 90)
 			(effects
 				(font
@@ -3923,7 +3923,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "R38")
+					(reference "R703")
 					(unit 1)
 				)
 			)
@@ -3939,7 +3939,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8bd7391c-ad87-4b43-ad0a-c208d50ae6cd")
-		(property "Reference" "SW2"
+		(property "Reference" "SW701"
 			(at 45.72 38.1 0)
 			(effects
 				(font
@@ -4033,7 +4033,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "SW2")
+					(reference "SW701")
 					(unit 1)
 				)
 			)
@@ -4049,7 +4049,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8c95ee97-36dd-4fb3-9e0c-d3ee3714ae88")
-		(property "Reference" "R39"
+		(property "Reference" "R708"
 			(at 99.06 55.8799 0)
 			(effects
 				(font
@@ -4067,7 +4067,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 94.742 57.15 90)
 			(effects
 				(font
@@ -4103,7 +4103,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "R39")
+					(reference "R708")
 					(unit 1)
 				)
 			)
@@ -4119,7 +4119,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "94e61a66-a687-4d9c-8645-54d36e9f1aae")
-		(property "Reference" "J8"
+		(property "Reference" "J708"
 			(at 268.605 87.63 0)
 			(effects
 				(font
@@ -4135,7 +4135,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical"
 			(at 267.97 107.95 0)
 			(effects
 				(font
@@ -4207,7 +4207,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "J8")
+					(reference "J708")
 					(unit 1)
 				)
 			)
@@ -4223,7 +4223,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9e3ccf1e-ba25-4970-834c-cb10221dee40")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR0704"
 			(at 162.56 87.63 0)
 			(effects
 				(font
@@ -4273,7 +4273,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "#PWR028")
+					(reference "#PWR0704")
 					(unit 1)
 				)
 			)
@@ -4289,7 +4289,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9fd27764-784e-43c5-8f16-ce3664b3a917")
-		(property "Reference" "R37"
+		(property "Reference" "R702"
 			(at 59.69 116.84 90)
 			(effects
 				(font
@@ -4305,7 +4305,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 59.69 124.968 90)
 			(effects
 				(font
@@ -4341,7 +4341,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "R37")
+					(reference "R702")
 					(unit 1)
 				)
 			)
@@ -4357,7 +4357,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f11d3bb6-afd6-45f2-a935-3bd41009f25c")
-		(property "Reference" "J3"
+		(property "Reference" "J703"
 			(at 191.135 87.63 0)
 			(effects
 				(font
@@ -4373,7 +4373,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical"
 			(at 190.5 107.95 0)
 			(effects
 				(font
@@ -4445,7 +4445,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "J3")
+					(reference "J703")
 					(unit 1)
 				)
 			)
@@ -4461,7 +4461,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f16f7117-669b-4f46-8ab1-4f10c13bf89f")
-		(property "Reference" "J6"
+		(property "Reference" "J706"
 			(at 235.585 87.63 0)
 			(effects
 				(font
@@ -4477,7 +4477,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical"
 			(at 234.95 107.95 0)
 			(effects
 				(font
@@ -4549,7 +4549,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "J6")
+					(reference "J706")
 					(unit 1)
 				)
 			)
@@ -4565,7 +4565,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f2fbf448-6f0b-441f-be18-f9631eae0e18")
-		(property "Reference" "J4"
+		(property "Reference" "J704"
 			(at 206.375 87.63 0)
 			(effects
 				(font
@@ -4581,7 +4581,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical"
 			(at 205.74 107.95 0)
 			(effects
 				(font
@@ -4653,7 +4653,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "J4")
+					(reference "J704")
 					(unit 1)
 				)
 			)
@@ -4669,7 +4669,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ff5af32b-4072-4e6a-ae4d-a3801404603c")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR0702"
 			(at 81.28 148.59 0)
 			(effects
 				(font
@@ -4719,7 +4719,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/dcbcf723-f7ed-4082-a41f-9f6fc76b941a"
-					(reference "#PWR025")
+					(reference "#PWR0702")
 					(unit 1)
 				)
 			)

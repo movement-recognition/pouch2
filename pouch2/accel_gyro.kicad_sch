@@ -1984,7 +1984,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0ad30781-a84b-417e-9371-e0665b033624")
-		(property "Reference" "R10"
+		(property "Reference" "R203"
 			(at 71.12 151.13 90)
 			(effects
 				(font
@@ -2000,7 +2000,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 71.12 143.002 90)
 			(effects
 				(font
@@ -2036,7 +2036,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "R10")
+					(reference "R203")
 					(unit 1)
 				)
 			)
@@ -2052,7 +2052,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0d3055ae-f7d9-4928-a65a-b2ca51870e33")
-		(property "Reference" "JP3"
+		(property "Reference" "JP201"
 			(at 76.2 128.2699 90)
 			(effects
 				(font
@@ -2109,7 +2109,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "JP3")
+					(reference "JP201")
 					(unit 1)
 				)
 			)
@@ -2125,7 +2125,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2f930ffc-ad61-4dbb-9194-4148d340fb78")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR0204"
 			(at 73.66 130.81 0)
 			(effects
 				(font
@@ -2175,7 +2175,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "#PWR012")
+					(reference "#PWR0204")
 					(unit 1)
 				)
 			)
@@ -2191,7 +2191,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "31c4a2cb-1f57-474b-aabd-fb5d1f137f49")
-		(property "Reference" "JP1"
+		(property "Reference" "JP203"
 			(at 191.77 66.0399 90)
 			(effects
 				(font
@@ -2248,7 +2248,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "JP1")
+					(reference "JP203")
 					(unit 1)
 				)
 			)
@@ -2264,7 +2264,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "47a4abe3-37b9-46da-babb-91e417ee4f11")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR0208"
 			(at 194.31 78.74 0)
 			(effects
 				(font
@@ -2314,7 +2314,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "#PWR02")
+					(reference "#PWR0208")
 					(unit 1)
 				)
 			)
@@ -2330,7 +2330,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4a6972e9-9534-4edd-b932-6218380ed8d2")
-		(property "Reference" "R6"
+		(property "Reference" "R208"
 			(at 194.31 44.45 90)
 			(effects
 				(font
@@ -2346,7 +2346,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 194.31 52.578 90)
 			(effects
 				(font
@@ -2382,7 +2382,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "R6")
+					(reference "R208")
 					(unit 1)
 				)
 			)
@@ -2398,7 +2398,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4e687eb6-ae34-4219-aa0b-2d852e0c14a7")
-		(property "Reference" "U2"
+		(property "Reference" "U201"
 			(at 30.48 55.8799 0)
 			(effects
 				(font
@@ -2470,7 +2470,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "U2")
+					(reference "U201")
 					(unit 1)
 				)
 			)
@@ -2486,7 +2486,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5634ea53-fb28-42ce-b245-05aa43b2f7b0")
-		(property "Reference" "R11"
+		(property "Reference" "R204"
 			(at 71.12 161.29 90)
 			(effects
 				(font
@@ -2502,7 +2502,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 71.12 156.718 90)
 			(effects
 				(font
@@ -2538,7 +2538,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "R11")
+					(reference "R204")
 					(unit 1)
 				)
 			)
@@ -2554,7 +2554,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "70f33ba4-13c6-422f-9ba2-ead8ae469786")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR0209"
 			(at 224.79 78.74 0)
 			(effects
 				(font
@@ -2604,7 +2604,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "#PWR05")
+					(reference "#PWR0209")
 					(unit 1)
 				)
 			)
@@ -2620,7 +2620,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7885a81a-d14e-41df-9f78-fe4d1dd92822")
-		(property "Reference" "JP2"
+		(property "Reference" "JP202"
 			(at 78.74 35.5599 90)
 			(effects
 				(font
@@ -2677,7 +2677,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "JP2")
+					(reference "JP202")
 					(unit 1)
 				)
 			)
@@ -2693,7 +2693,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7ae43aeb-b7cb-4259-ba79-aa97597ecb14")
-		(property "Reference" "XX1"
+		(property "Reference" "XX201"
 			(at 229.5241 30.48 0)
 			(effects
 				(font
@@ -2765,7 +2765,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "XX1")
+					(reference "XX201")
 					(unit 1)
 				)
 			)
@@ -2781,7 +2781,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8e306790-4b52-4ec1-b1f0-230b1047e15c")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR0203"
 			(at 73.66 114.3 0)
 			(effects
 				(font
@@ -2831,7 +2831,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "#PWR011")
+					(reference "#PWR0203")
 					(unit 1)
 				)
 			)
@@ -2847,7 +2847,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9048f986-e137-479c-9610-751009233765")
-		(property "Reference" "R8"
+		(property "Reference" "R206"
 			(at 73.66 68.58 90)
 			(effects
 				(font
@@ -2863,7 +2863,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 73.66 64.008 90)
 			(effects
 				(font
@@ -2899,7 +2899,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "R8")
+					(reference "R206")
 					(unit 1)
 				)
 			)
@@ -2915,7 +2915,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "969d9239-8982-49f3-92ae-45500f9dcde7")
-		(property "Reference" "R12"
+		(property "Reference" "R202"
 			(at 64.77 41.9101 0)
 			(effects
 				(font
@@ -2933,7 +2933,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 69.088 40.64 90)
 			(effects
 				(font
@@ -2969,7 +2969,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "R12")
+					(reference "R202")
 					(unit 1)
 				)
 			)
@@ -2985,7 +2985,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9719dc6a-c8a1-4112-8c8a-904eb3e4d32c")
-		(property "Reference" "R9"
+		(property "Reference" "R205"
 			(at 73.66 58.42 90)
 			(effects
 				(font
@@ -3001,7 +3001,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 73.66 50.292 90)
 			(effects
 				(font
@@ -3037,7 +3037,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "R9")
+					(reference "R205")
 					(unit 1)
 				)
 			)
@@ -3053,7 +3053,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ab899d90-be01-4a90-9563-b57775a33078")
-		(property "Reference" "R5"
+		(property "Reference" "R207"
 			(at 194.31 34.29 90)
 			(effects
 				(font
@@ -3069,7 +3069,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 194.31 38.862 90)
 			(effects
 				(font
@@ -3105,7 +3105,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "R5")
+					(reference "R207")
 					(unit 1)
 				)
 			)
@@ -3121,7 +3121,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "adf59d0c-35ca-4657-b261-9364a4270f32")
-		(property "Reference" "R13"
+		(property "Reference" "R201"
 			(at 62.23 134.6201 0)
 			(effects
 				(font
@@ -3139,7 +3139,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 66.548 133.35 90)
 			(effects
 				(font
@@ -3175,7 +3175,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "R13")
+					(reference "R201")
 					(unit 1)
 				)
 			)
@@ -3191,7 +3191,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b374bd2a-b44d-4a9f-bb95-01990044f778")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR0201"
 			(at 39.37 83.82 0)
 			(effects
 				(font
@@ -3241,7 +3241,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "#PWR07")
+					(reference "#PWR0201")
 					(unit 1)
 				)
 			)
@@ -3257,7 +3257,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bbb273bf-4d7c-4d58-a8d4-638cb6742fd2")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR0202"
 			(at 39.37 177.8 0)
 			(effects
 				(font
@@ -3307,7 +3307,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "#PWR08")
+					(reference "#PWR0202")
 					(unit 1)
 				)
 			)
@@ -3323,7 +3323,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c26a9dd0-f4ad-43f1-adeb-d27822c004a0")
-		(property "Reference" "U3"
+		(property "Reference" "U202"
 			(at 30.48 148.5899 0)
 			(effects
 				(font
@@ -3395,7 +3395,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "U3")
+					(reference "U202")
 					(unit 1)
 				)
 			)
@@ -3411,7 +3411,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c84fc22a-0468-4e4c-be73-acef9d650b6c")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR0205"
 			(at 76.2 25.4 0)
 			(effects
 				(font
@@ -3461,7 +3461,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "#PWR010")
+					(reference "#PWR0205")
 					(unit 1)
 				)
 			)
@@ -3477,7 +3477,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d1cc4eb7-2b71-4f58-923a-d1c4944362fa")
-		(property "Reference" "R7"
+		(property "Reference" "R209"
 			(at 205.74 62.2299 0)
 			(effects
 				(font
@@ -3495,7 +3495,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 201.422 63.5 90)
 			(effects
 				(font
@@ -3531,7 +3531,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "R7")
+					(reference "R209")
 					(unit 1)
 				)
 			)
@@ -3547,7 +3547,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ec1080e7-416a-4914-a67f-f75718350e38")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR0207"
 			(at 194.31 66.04 0)
 			(effects
 				(font
@@ -3597,7 +3597,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "#PWR01")
+					(reference "#PWR0207")
 					(unit 1)
 				)
 			)
@@ -3613,7 +3613,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fa175fc2-e4b7-435c-9c40-2e2dd2545e5e")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR0206"
 			(at 76.2 38.1 0)
 			(effects
 				(font
@@ -3663,7 +3663,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/245dc3ad-3701-4382-b188-f6e1df98764a"
-					(reference "#PWR09")
+					(reference "#PWR0206")
 					(unit 1)
 				)
 			)

@@ -670,7 +670,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "06cdefa5-70fa-436f-bbbf-702ed32f662b")
-		(property "Reference" "R14"
+		(property "Reference" "R302"
 			(at 187.96 73.66 90)
 			(effects
 				(font
@@ -686,7 +686,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 187.96 65.532 90)
 			(effects
 				(font
@@ -722,7 +722,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/d0ac005f-caac-4a17-bc1d-5f52781e91da"
-					(reference "R14")
+					(reference "R302")
 					(unit 1)
 				)
 			)
@@ -738,7 +738,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "44d71f11-a34b-464b-81d0-f0bd67425fcc")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR0301"
 			(at 158.75 100.33 0)
 			(effects
 				(font
@@ -788,7 +788,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/d0ac005f-caac-4a17-bc1d-5f52781e91da"
-					(reference "#PWR013")
+					(reference "#PWR0301")
 					(unit 1)
 				)
 			)
@@ -804,7 +804,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "54505ce4-787d-4403-a713-3bf1151e045b")
-		(property "Reference" "R16"
+		(property "Reference" "R301"
 			(at 144.78 40.64 90)
 			(effects
 				(font
@@ -820,7 +820,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 144.78 48.768 90)
 			(effects
 				(font
@@ -856,7 +856,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/d0ac005f-caac-4a17-bc1d-5f52781e91da"
-					(reference "R16")
+					(reference "R301")
 					(unit 1)
 				)
 			)
@@ -873,7 +873,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8edac87b-c46b-404d-a912-c00892379074")
-		(property "Reference" "U5"
+		(property "Reference" "U301"
 			(at 160.9441 85.09 0)
 			(effects
 				(font
@@ -891,7 +891,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical"
 			(at 158.75 83.82 0)
 			(effects
 				(font
@@ -948,7 +948,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/d0ac005f-caac-4a17-bc1d-5f52781e91da"
-					(reference "U5")
+					(reference "U301")
 					(unit 1)
 				)
 			)
@@ -964,7 +964,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fa4328c1-9a6b-40a7-9706-bbc542a9ec95")
-		(property "Reference" "R15"
+		(property "Reference" "R303"
 			(at 187.96 83.82 90)
 			(effects
 				(font
@@ -980,7 +980,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0815_2038Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 187.96 79.248 90)
 			(effects
 				(font
@@ -1016,7 +1016,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/d0ac005f-caac-4a17-bc1d-5f52781e91da"
-					(reference "R15")
+					(reference "R303")
 					(unit 1)
 				)
 			)

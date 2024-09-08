@@ -499,7 +499,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "85852e47-8ef9-440d-811c-5e77c97eae61")
-		(property "Reference" "U6"
+		(property "Reference" "U601"
 			(at 130.81 79.3749 0)
 			(effects
 				(font
@@ -517,7 +517,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical"
 			(at 138.43 90.17 0)
 			(effects
 				(font
@@ -571,7 +571,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/b8350d3f-b373-4dd1-a1a4-91efa3226b27"
-					(reference "U6")
+					(reference "U601")
 					(unit 1)
 				)
 			)
@@ -587,7 +587,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a38b6b36-291e-4e7c-896b-f7090196459a")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR0601"
 			(at 137.16 106.68 0)
 			(effects
 				(font
@@ -637,7 +637,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/b8350d3f-b373-4dd1-a1a4-91efa3226b27"
-					(reference "#PWR023")
+					(reference "#PWR0601")
 					(unit 1)
 				)
 			)
