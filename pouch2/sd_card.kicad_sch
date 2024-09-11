@@ -448,7 +448,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
+		(property "Footprint" "SensorBoards:DEBO_SD-Card"
 			(at 132.08 97.79 0)
 			(effects
 				(font

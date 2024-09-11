@@ -2711,7 +2711,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SensorBoards:DEBO_MPU-6050_Board"
+		(property "Footprint" "SensorBoards:DEBO_MPU6050"
 			(at 224.79 68.58 0)
 			(effects
 				(font

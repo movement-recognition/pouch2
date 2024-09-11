@@ -2252,6 +2252,17 @@
 		)
 		(uuid "a238396f-3c9c-4603-8cce-26275a028d3e")
 	)
+	(label "GND"
+		(at 127 102.87 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e9b992a3-94bc-4294-99ba-b19bdecee741")
+	)
 	(hierarchical_label "SW_VCC3"
 		(shape input)
 		(at 33.02 106.68 180)
