@@ -74,7 +74,7 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
 			(outputdirectory "")
 		)
@@ -4063,7 +4063,7 @@
 			(uuid "4fab323b-5c36-4c76-af68-b557e5c6e97f")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 1.27 360)
+			(at 0 1.27 0)
 			(layer "F.Fab")
 			(uuid "355b09c9-540a-4090-938e-375f7da51d83")
 			(effects
@@ -4327,7 +4327,7 @@
 			(uuid "c6fe2987-b5d7-46ad-a031-8068c41e2757")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 1.27 360)
+			(at 0 1.27 0)
 			(layer "F.Fab")
 			(uuid "a2d4d16d-5e30-4e12-ab1d-d3a3bbb5604c")
 			(effects
@@ -9046,7 +9046,7 @@
 			(uuid "e2a53050-6db9-46d5-82d6-699ef41123dd")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 1.27 360)
+			(at 0 1.27 0)
 			(layer "F.Fab")
 			(uuid "17a86bbe-3da8-47af-963f-73f491517a47")
 			(effects
@@ -9787,7 +9787,7 @@
 			(uuid "e0536335-929a-42b5-8297-d1a017a771ce")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 6.35 360)
+			(at 0 6.35 0)
 			(layer "F.Fab")
 			(uuid "a0257e55-b5d2-42c0-9c6d-c9b85fdb8108")
 			(effects
@@ -10268,7 +10268,7 @@
 			(uuid "a94810a8-f286-464b-bba9-6783f570ecf0")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 1.27 360)
+			(at 0 1.27 0)
 			(layer "F.Fab")
 			(uuid "7447faba-d52c-46e9-b32f-d8c031383d6b")
 			(effects
@@ -18103,7 +18103,7 @@
 			(uuid "cca94187-0b6c-43a5-ad7a-a5eff04e5617")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(uuid "3e558c2a-391d-44a8-8bee-050dbb5029b8")
 			(effects
