@@ -3,7 +3,7 @@
 	(generator "eeschema")
 	(generator_version "8.0")
 	(uuid "278cfa6b-9496-4a22-b425-8abdb96793ef")
-	(paper "A4")
+	(paper "A3")
 	(title_block
 		(title "Pouch 2")
 		(date "2024-08-30")
@@ -9151,7 +9151,7 @@
 		)
 		(uuid "10097572-ac6b-4520-9b6a-5dbd84d81471")
 	)
-	(label "SPI2_CS"
+	(label "SPI2_CS_SD"
 		(at 109.22 101.6 0)
 		(fields_autoplaced yes)
 		(effects
@@ -9492,7 +9492,7 @@
 		)
 		(uuid "a74656c7-832a-4cf6-97a2-dd3058243604")
 	)
-	(label "SPI_CS"
+	(label "SPI_CS_SD"
 		(at 81.28 33.02 0)
 		(fields_autoplaced yes)
 		(effects
@@ -12608,7 +12608,7 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "245dc3ad-3701-4382-b188-f6e1df98764a")
-		(property "Sheetname" "accel_gyro"
+		(property "Sheetname" "Accelerometer, Gyroscope"
 			(at 26.67 17.0684 0)
 			(effects
 				(font
@@ -12804,7 +12804,7 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "4c18d891-44a5-41ab-9141-17f4525bee9f")
-		(property "Sheetname" "SD_Card"
+		(property "Sheetname" "SD Card"
 			(at 58.42 17.0684 0)
 			(effects
 				(font
@@ -12984,6 +12984,44 @@
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef"
 					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 27.94 200.66)
+		(size 20.32 25.4)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c2c54002-cd4a-4798-8316-b28ab1c46cc6")
+		(property "Sheetname" "SIM"
+			(at 27.94 199.9484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sim868_module.kicad_sch"
+			(at 27.94 226.6446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "pouch2"
+				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef"
+					(page "9")
 				)
 			)
 		)

@@ -591,7 +591,7 @@
     ],
     [
       "245dc3ad-3701-4382-b188-f6e1df98764a",
-      "accel_gyro"
+      "Accelerometer, Gyroscope"
     ],
     [
       "d0ac005f-caac-4a17-bc1d-5f52781e91da",
@@ -599,7 +599,7 @@
     ],
     [
       "4c18d891-44a5-41ab-9141-17f4525bee9f",
-      "SD_Card"
+      "SD Card"
     ],
     [
       "26a5e7cd-49ee-4cdb-bd4b-2b9c2e5ea1b7",
@@ -616,6 +616,10 @@
     [
       "1f6da6ca-ffaf-4729-a842-c849ecc1a6dc",
       "PiCoupler"
+    ],
+    [
+      "c2c54002-cd4a-4798-8316-b28ab1c46cc6",
+      "SIM"
     ]
   ],
   "text_variables": {}

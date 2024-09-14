@@ -1,0 +1,14 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "4d9d0004-f362-4132-8849-0c01c8c66848")
+	(paper "A4")
+	(title_block
+		(title "Pouch 2")
+		(date "2024-08-30")
+		(company "Frankfurt University")
+		(comment 2 "Author: Leon Schnieber")
+	)
+	(lib_symbols)
+)
