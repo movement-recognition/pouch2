@@ -1957,6 +1957,16 @@
 	)
 	(wire
 		(pts
+			(xy 53.34 58.42) (xy 64.77 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01d61ebb-5f4a-4444-a81b-4497f42c3102")
+	)
+	(wire
+		(pts
 			(xy 177.8 92.71) (xy 177.8 86.36)
 		)
 		(stroke
@@ -2147,6 +2157,16 @@
 	)
 	(wire
 		(pts
+			(xy 27.94 55.88) (xy 38.1 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "571cc187-d1e7-463b-92e6-6b1e1c4b7adf")
+	)
+	(wire
+		(pts
 			(xy 91.44 53.34) (xy 96.52 53.34)
 		)
 		(stroke
@@ -2244,6 +2264,16 @@
 			(type default)
 		)
 		(uuid "6ae5a764-3571-464a-8672-e317462261b1")
+	)
+	(wire
+		(pts
+			(xy 27.94 60.96) (xy 38.1 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c85b713-ba31-450b-bcdd-fa578ba3c158")
 	)
 	(wire
 		(pts
@@ -2407,6 +2437,36 @@
 	)
 	(wire
 		(pts
+			(xy 53.34 63.5) (xy 64.77 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5a33008-681a-4ee1-89d6-bb59901fcda2")
+	)
+	(wire
+		(pts
+			(xy 27.94 63.5) (xy 38.1 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7d406b1-fc98-4150-bdc7-614d146a1dea")
+	)
+	(wire
+		(pts
+			(xy 53.34 60.96) (xy 64.77 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b51b60be-e76f-4307-a424-9b7eb9aef7bb")
+	)
+	(wire
+		(pts
 			(xy 46.99 110.49) (xy 55.88 110.49)
 		)
 		(stroke
@@ -2447,6 +2507,16 @@
 	)
 	(wire
 		(pts
+			(xy 53.34 55.88) (xy 64.77 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1fc2b00-8c81-40da-bd57-9953cee6fe84")
+	)
+	(wire
+		(pts
 			(xy 53.34 45.72) (xy 77.47 45.72)
 		)
 		(stroke
@@ -2454,6 +2524,16 @@
 			(type default)
 		)
 		(uuid "c8758909-ac03-4a24-8260-a8218214af95")
+	)
+	(wire
+		(pts
+			(xy 27.94 58.42) (xy 38.1 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c891f67f-c45b-4598-b9d9-f899fa681c42")
 	)
 	(wire
 		(pts
@@ -2654,6 +2734,182 @@
 			(type default)
 		)
 		(uuid "fdff29d8-3a42-4112-a6de-e8f7b90e0ade")
+	)
+	(global_label "HMI_S24"
+		(shape input)
+		(at 64.77 58.42 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "93d7daca-d289-4dfa-add9-abf701d3f009")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 75.738 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "HMI_S44"
+		(shape input)
+		(at 64.77 63.5 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a011f405-3833-4fa1-8bb1-e9ed430a20c8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 75.738 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "HMI_S33"
+		(shape input)
+		(at 27.94 60.96 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a41825f3-e4f7-476e-bbf1-7062f50f9734")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 16.972 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "HMI_S34"
+		(shape input)
+		(at 64.77 60.96 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c2cc599f-b7a3-4b00-9cbd-edb31f2d3b50")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 75.738 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "HMI_S13"
+		(shape input)
+		(at 27.94 55.88 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c4af77b7-aed1-46c0-8982-4e6d5fa0eb2a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 16.972 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "HMI_S43"
+		(shape input)
+		(at 27.94 63.5 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e3ae2024-4a9e-447e-81b4-bcdbed1851ab")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 16.972 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "HMI_S23"
+		(shape input)
+		(at 27.94 58.42 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e5ea229c-ff7d-4068-b9a6-cc6f94938417")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 16.972 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "HMI_S14"
+		(shape input)
+		(at 64.77 55.88 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e75fe70d-301b-4dd7-b8c3-35f764d7a5e7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 75.738 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
 	)
 	(hierarchical_label "Campaign"
 		(shape output)

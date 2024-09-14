@@ -11,6 +11,127 @@
 		(comment 2 "Author: Leon Schnieber")
 	)
 	(lib_symbols
+		(symbol "Device:R"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "SensorBoards:DEBO_SD-Card"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -281,17 +402,27 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 69.85) (xy 130.81 69.85)
+			(xy 147.32 87.63) (xy 156.21 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "09a93d94-a6ce-4c6e-a62d-dbdc81a0e517")
+		(uuid "138f82c5-836c-4b07-9529-64223bd4407a")
 	)
 	(wire
 		(pts
-			(xy 137.16 82.55) (xy 144.78 82.55)
+			(xy 154.94 85.09) (xy 156.21 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ad533bb-3642-475b-b539-0685e453796a")
+	)
+	(wire
+		(pts
+			(xy 137.16 82.55) (xy 139.7 82.55)
 		)
 		(stroke
 			(width 0)
@@ -301,7 +432,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 69.85) (xy 130.81 71.12)
+			(xy 130.81 68.58) (xy 130.81 71.12)
 		)
 		(stroke
 			(width 0)
@@ -311,7 +442,17 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 87.63) (xy 144.78 87.63)
+			(xy 147.32 82.55) (xy 156.21 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77c54e15-9d8d-421c-9d70-8886bcb4c209")
+	)
+	(wire
+		(pts
+			(xy 137.16 87.63) (xy 139.7 87.63)
 		)
 		(stroke
 			(width 0)
@@ -321,7 +462,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 90.17) (xy 144.78 90.17)
+			(xy 137.16 90.17) (xy 147.32 90.17)
 		)
 		(stroke
 			(width 0)
@@ -331,7 +472,17 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 85.09) (xy 144.78 85.09)
+			(xy 154.94 90.17) (xy 156.21 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1ae27ad-c989-40db-b592-7add14997056")
+	)
+	(wire
+		(pts
+			(xy 137.16 85.09) (xy 147.32 85.09)
 		)
 		(stroke
 			(width 0)
@@ -351,7 +502,7 @@
 	)
 	(text "Idle:   ~1-2mA\nWrite:  ~24mA"
 		(exclude_from_sim no)
-		(at 122.682 64.262 0)
+		(at 135.89 71.12 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -362,7 +513,7 @@
 	)
 	(hierarchical_label "SCK"
 		(shape input)
-		(at 144.78 87.63 0)
+		(at 156.21 87.63 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -374,7 +525,7 @@
 	)
 	(hierarchical_label "VCC"
 		(shape input)
-		(at 144.78 69.85 0)
+		(at 130.81 68.58 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -386,7 +537,7 @@
 	)
 	(hierarchical_label "MISO"
 		(shape bidirectional)
-		(at 144.78 82.55 0)
+		(at 156.21 82.55 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -398,7 +549,7 @@
 	)
 	(hierarchical_label "MOSI"
 		(shape bidirectional)
-		(at 144.78 85.09 0)
+		(at 156.21 85.09 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -410,7 +561,7 @@
 	)
 	(hierarchical_label "CS"
 		(shape input)
-		(at 144.78 90.17 0)
+		(at 156.21 90.17 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -419,6 +570,207 @@
 			(justify left)
 		)
 		(uuid "ea3aa77f-c007-4dde-a04d-40ecc5854400")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 151.13 85.09 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "275775da-8c69-4d7b-af76-0c3ca2adaf80")
+		(property "Reference" "R402"
+			(at 151.13 83.058 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 151.13 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 151.13 83.312 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 151.13 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 151.13 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ef66b50f-edeb-4f7f-9eea-74e7b25bf33e")
+		)
+		(pin "2"
+			(uuid "ddc1246a-ff45-400a-b6c6-c0c5a89a701f")
+		)
+		(instances
+			(project ""
+				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/4c18d891-44a5-41ab-9141-17f4525bee9f"
+					(reference "R402")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 151.13 90.17 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5642e728-1cc9-402a-942d-8679ae36e28f")
+		(property "Reference" "R404"
+			(at 150.876 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 151.13 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 151.13 88.392 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 151.13 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 151.13 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fe1e4898-8a93-429d-acb3-9014db4ab87c")
+		)
+		(pin "2"
+			(uuid "5ff8dc61-ea96-4f1d-9548-0248eafb4159")
+		)
+		(instances
+			(project ""
+				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/4c18d891-44a5-41ab-9141-17f4525bee9f"
+					(reference "R404")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 143.51 87.63 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "88158b0e-45c4-4996-83b8-7077fea26d8a")
+		(property "Reference" "R403"
+			(at 143.256 89.916 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 143.51 87.63 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 143.51 89.408 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 143.51 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 143.51 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a12536b9-d480-4b16-8cdc-3f1f12c53354")
+		)
+		(pin "2"
+			(uuid "c7cc3492-8c86-4190-aead-dd3c190bf05e")
+		)
+		(instances
+			(project ""
+				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/4c18d891-44a5-41ab-9141-17f4525bee9f"
+					(reference "R403")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "SensorBoards:DEBO_SD-Card")
@@ -563,6 +915,73 @@
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/4c18d891-44a5-41ab-9141-17f4525bee9f"
 					(reference "#PWR0401")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 143.51 82.55 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fd151749-dc71-4a50-be1f-a32f73debf05")
+		(property "Reference" "R401"
+			(at 143.51 80.264 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 143.51 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 143.51 84.328 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 143.51 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 143.51 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "04d0c8d6-d393-49e3-88f3-44ebb6cf994a")
+		)
+		(pin "1"
+			(uuid "31e89081-1d32-41d9-a1fb-06c14aa85f22")
+		)
+		(instances
+			(project ""
+				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/4c18d891-44a5-41ab-9141-17f4525bee9f"
+					(reference "R401")
 					(unit 1)
 				)
 			)

@@ -5526,6 +5526,75 @@
 		)
 		(uuid "88cbf4ae-e2f7-4214-8b5f-587020bb344d")
 	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 76.2 50.8 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "728eb161-7b76-49f3-9a48-bb6fe035ac9e")
+		(property "Netclass" "Thick"
+			(at 73.66 50.1015 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 73.66 87.63 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d0ea7deb-03a6-4ad3-9de2-6e4c910a3b62")
+		(property "Netclass" "Thick"
+			(at 71.12 86.9315 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 76.2 64.77 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e8ff08e7-3316-49e6-9890-69a208719c72")
+		(property "Netclass" "Thick"
+			(at 73.66 64.0715 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+	)
 	(symbol
 		(lib_id "Device:R")
 		(at 76.2 58.42 180)
