@@ -460,6 +460,24 @@
 		(color 0 0 0 0)
 		(uuid "4070aea5-8805-41ed-9677-6245d8434dc6")
 	)
+	(no_connect
+		(at 146.05 67.31)
+		(uuid "7bee7587-1fce-4eb6-95c1-ac844b15f3d7")
+	)
+	(no_connect
+		(at 162.56 52.07)
+		(uuid "a75617c5-d138-41db-bfe9-858b37fcacb1")
+	)
+	(wire
+		(pts
+			(xy 162.56 52.07) (xy 162.56 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13749115-bda5-4930-b0cc-65126a586db3")
+	)
 	(wire
 		(pts
 			(xy 154.94 46.99) (xy 198.12 46.99)
@@ -479,6 +497,16 @@
 			(type default)
 		)
 		(uuid "2b22d6c2-10d8-4ab3-99e3-3574b852cf84")
+	)
+	(wire
+		(pts
+			(xy 146.05 67.31) (xy 147.32 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "457e23d7-dcb9-4c4c-bfe0-7fe35fd1f685")
 	)
 	(wire
 		(pts
@@ -700,7 +728,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "06cdefa5-70fa-436f-bbbf-702ed32f662b")
-		(property "Reference" "R302"
+		(property "Reference" "R304"
 			(at 190.5 81.28 90)
 			(effects
 				(font
@@ -752,7 +780,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/d0ac005f-caac-4a17-bc1d-5f52781e91da"
-					(reference "R302")
+					(reference "R304")
 					(unit 1)
 				)
 			)
@@ -901,7 +929,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "71431463-04b5-4513-8891-6c73844ebdb2")
-		(property "Reference" "R304"
+		(property "Reference" "R303"
 			(at 190.5 64.008 90)
 			(effects
 				(font
@@ -953,7 +981,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/d0ac005f-caac-4a17-bc1d-5f52781e91da"
-					(reference "R304")
+					(reference "R303")
 					(unit 1)
 				)
 			)
@@ -969,7 +997,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8658b7ba-68aa-40f6-8087-4f051289818f")
-		(property "Reference" "R305"
+		(property "Reference" "R302"
 			(at 190.5 52.07 90)
 			(effects
 				(font
@@ -1021,7 +1049,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/d0ac005f-caac-4a17-bc1d-5f52781e91da"
-					(reference "R305")
+					(reference "R302")
 					(unit 1)
 				)
 			)
@@ -1129,7 +1157,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fa4328c1-9a6b-40a7-9706-bbc542a9ec95")
-		(property "Reference" "R303"
+		(property "Reference" "R305"
 			(at 190.5 91.44 90)
 			(effects
 				(font
@@ -1181,7 +1209,7 @@
 		(instances
 			(project "pouch2"
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/d0ac005f-caac-4a17-bc1d-5f52781e91da"
-					(reference "R303")
+					(reference "R305")
 					(unit 1)
 				)
 			)

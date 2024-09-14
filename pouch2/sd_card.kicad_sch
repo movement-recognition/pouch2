@@ -580,7 +580,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "275775da-8c69-4d7b-af76-0c3ca2adaf80")
-		(property "Reference" "R402"
+		(property "Reference" "R403"
 			(at 151.13 83.058 90)
 			(effects
 				(font
@@ -632,7 +632,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/4c18d891-44a5-41ab-9141-17f4525bee9f"
-					(reference "R402")
+					(reference "R403")
 					(unit 1)
 				)
 			)
@@ -714,7 +714,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "88158b0e-45c4-4996-83b8-7077fea26d8a")
-		(property "Reference" "R403"
+		(property "Reference" "R402"
 			(at 143.256 89.916 90)
 			(effects
 				(font
@@ -766,7 +766,7 @@
 		(instances
 			(project ""
 				(path "/278cfa6b-9496-4a22-b425-8abdb96793ef/4c18d891-44a5-41ab-9141-17f4525bee9f"
-					(reference "R403")
+					(reference "R402")
 					(unit 1)
 				)
 			)

@@ -512,8 +512,11 @@
       "Net-(BT501-+)": "Thick",
       "Net-(BT501--)": "Thick",
       "Net-(JP501-A)": "Thick",
+      "Net-(JP503-A)": "Thick",
+      "Net-(K701-Pad14)": "Thick",
       "Net-(K801-Pad14)": "Thick",
-      "Net-(U101-3V3)": "Thick"
+      "Net-(U101-3V3)": "Thick",
+      "Net-(U101-VSYS)": "Thick"
     },
     "netclass_patterns": [
       {
