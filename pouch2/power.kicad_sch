@@ -2824,7 +2824,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 31.75) (xy 109.22 36.83)
+			(xy 114.3 36.83) (xy 114.3 41.91)
 		)
 		(stroke
 			(width 0)
@@ -3414,7 +3414,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 21.59) (xy 109.22 24.13)
+			(xy 114.3 24.13) (xy 114.3 29.21)
 		)
 		(stroke
 			(width 0)
@@ -4062,7 +4062,7 @@
 		(uuid "6d8c5f2e-f914-4a08-8dea-ac94d423fa15")
 	)
 	(label "VPOW"
-		(at 109.22 36.83 0)
+		(at 114.3 41.91 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4574,6 +4574,29 @@
 	(netclass_flag ""
 		(length 2.54)
 		(shape round)
+		(at 114.3 27.94 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ad75648f-b9a2-44d3-9aed-b0e6e676523c")
+		(property "Netclass" "Thick"
+			(at 111.76 27.2415 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
 		(at 240.03 26.67 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4620,7 +4643,7 @@
 	(netclass_flag ""
 		(length 2.54)
 		(shape round)
-		(at 109.22 33.02 90)
+		(at 114.3 38.1 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4628,9 +4651,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c489b786-2433-41d1-a4ea-ba2b34f92206")
+		(uuid "f43f7a34-74df-4c98-9909-34406ca3cd37")
 		(property "Netclass" "Thick"
-			(at 106.68 32.3215 90)
+			(at 111.76 37.4015 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5840,7 +5863,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 109.22 27.94 0)
+		(at 114.3 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5849,7 +5872,7 @@
 		(fields_autoplaced yes)
 		(uuid "5248fb39-a0a6-4235-a67f-35e07721472a")
 		(property "Reference" "R509"
-			(at 111.76 26.6699 0)
+			(at 116.84 31.7499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5858,7 +5881,7 @@
 			)
 		)
 		(property "Value" "0"
-			(at 111.76 29.2099 0)
+			(at 116.84 34.2899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5867,7 +5890,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 107.442 27.94 90)
+			(at 112.522 33.02 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5876,7 +5899,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 109.22 27.94 0)
+			(at 114.3 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5885,7 +5908,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 109.22 27.94 0)
+			(at 114.3 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6953,7 +6976,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 109.22 21.59 0)
+		(at 114.3 24.13 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6962,7 +6985,7 @@
 		(fields_autoplaced yes)
 		(uuid "8037a59f-0d23-408b-b6fb-d63d7c91eb84")
 		(property "Reference" "#PWR0501"
-			(at 109.22 25.4 0)
+			(at 114.3 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6971,7 +6994,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 109.22 16.51 0)
+			(at 114.3 19.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6979,7 +7002,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 109.22 21.59 0)
+			(at 114.3 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6988,7 +7011,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 109.22 21.59 0)
+			(at 114.3 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6997,7 +7020,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 109.22 21.59 0)
+			(at 114.3 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
