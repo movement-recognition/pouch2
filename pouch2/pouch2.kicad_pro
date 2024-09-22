@@ -58,18 +58,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        "solder_mask_bridge|117550000|147500000|6c725396-1ae3-4b72-8227-a94974380424|5c6814ff-7933-4dd4-8a7f-1728323824d5",
-        "solder_mask_bridge|117550000|148250000|6c725396-1ae3-4b72-8227-a94974380424|5c6814ff-7933-4dd4-8a7f-1728323824d5",
-        "solder_mask_bridge|117550000|148400000|6c725396-1ae3-4b72-8227-a94974380424|5c6814ff-7933-4dd4-8a7f-1728323824d5",
-        "solder_mask_bridge|120700000|149000000|300682aa-ffaf-4c18-bdae-acc4a9d9b627|d90f793a-1cf2-4ec1-afff-4aaadf9a7e65",
-        "solder_mask_bridge|121500000|130500000|d7241acf-c303-44eb-b36c-b8cb1774de84|57a7d6f9-bb82-4731-b35e-7804f8237029",
-        "solder_mask_bridge|121500000|132450000|7054a333-04e7-4020-b6b2-376b6875c49e|ba0a6505-ae98-45ee-9d95-ed40e5a23fc4",
-        "solder_mask_bridge|121500000|132900000|7054a333-04e7-4020-b6b2-376b6875c49e|ba0a6505-ae98-45ee-9d95-ed40e5a23fc4",
-        "solder_mask_bridge|128600000|136850000|24e79d52-1248-4b48-a383-815b4e6f5f35|b2537b6b-16ab-4cd0-a56a-0e2d6404a147",
-        "solder_mask_bridge|128700000|136850000|24e79d52-1248-4b48-a383-815b4e6f5f35|b2537b6b-16ab-4cd0-a56a-0e2d6404a147",
-        "solder_mask_bridge|129500000|140000000|a99ce20c-e8cc-4788-acb5-b534fad97326|91c0b3bd-0ac6-464a-95dc-d05b6628c922"
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -518,17 +507,25 @@
       "+3.3V": "Thick",
       "+BATT": "Thick",
       "/PiCoupler/PIZERO_VCC": "Thick",
+      "/Power/VCC_ANTE_BOOST": "Thick",
       "/Power/VPOW": "Thick",
+      "GND": "Thick",
       "HMI_S43": "Thick",
       "HMI_S44": "Thick",
       "Net-(BT501-+)": "Thick",
       "Net-(BT501--)": "Thick",
+      "Net-(J505-Pin_3)": "Thick",
       "Net-(JP501-A)": "Thick",
       "Net-(JP503-A)": "Thick",
+      "Net-(JP504-A)": "Thick",
+      "Net-(JP505-B)": "Thick",
+      "Net-(JP507-B)": "Thick",
       "Net-(K701-Pad14)": "Thick",
       "Net-(K801-Pad14)": "Thick",
+      "Net-(Q505-D)": "Thick",
       "Net-(U101-3V3)": "Thick",
-      "Net-(U101-VSYS)": "Thick"
+      "Net-(U101-VSYS)": "Thick",
+      "VCC": "Thick"
     },
     "netclass_patterns": [
       {
