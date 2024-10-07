@@ -1,0 +1,10 @@
+1  Polyfuse
+3  LEDs 5mm bunt
+4  AO3401A
+2  CSD16406Q3
+1  MMBT3906
+1  BQ29705DSER
+
+1 random 0805-Diode
+1 Sammlung an Headerleisten
+

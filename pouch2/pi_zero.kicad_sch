@@ -5657,6 +5657,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C17477"
+			(at 148.59 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN_Eurocircuit" "GPR08050R"
+			(at 148.59 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "89ebb3c9-6591-47bd-9505-d9811517d6ff")
 		)
@@ -5719,6 +5737,24 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 76.2 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C17477"
+			(at 76.2 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN_Eurocircuit" "GPR08050R"
 			(at 76.2 58.42 0)
 			(effects
 				(font
@@ -5797,6 +5833,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C17673"
+			(at 158.75 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN_Eurocircuit" "GPR08054K7"
+			(at 158.75 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fb6e4713-0b06-47d9-bff7-d9d523286caa")
 		)
@@ -5857,6 +5911,15 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x20, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 180.34 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN_Eurocircuit" ""
 			(at 180.34 66.04 0)
 			(effects
 				(font
@@ -6113,6 +6176,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C17415"
+			(at 44.45 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN_Eurocircuit" "GPR080510R"
+			(at 44.45 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "496f5193-e02c-4999-8bf9-10d9724c31d6")
 		)
@@ -6175,6 +6256,15 @@
 			)
 		)
 		(property "Description" "Relay 5V Reichelt"
+			(at 68.58 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN_Eurocircuit" ""
 			(at 68.58 74.93 0)
 			(effects
 				(font
@@ -6249,6 +6339,24 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 162.56 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C17477"
+			(at 162.56 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN_Eurocircuit" "GPR08050R"
 			(at 162.56 45.72 0)
 			(effects
 				(font
@@ -6462,6 +6570,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN_Eurocircuit" "MMBT3906"
+			(at 60.96 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "18903904-9818-4efb-addc-b982d37c1bed")
 		)
@@ -6527,6 +6644,15 @@
 			)
 		)
 		(property "Description" "Diode"
+			(at 50.8 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN_Eurocircuit" ""
 			(at 50.8 74.93 0)
 			(effects
 				(font
@@ -6661,6 +6787,24 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 156.21 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C17477"
+			(at 156.21 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN_Eurocircuit" "GPR08050R"
 			(at 156.21 48.26 0)
 			(effects
 				(font
