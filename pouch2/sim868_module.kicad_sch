@@ -5455,6 +5455,15 @@
 				(hide yes)
 			)
 		)
+		(property "OrderStatus" "manual"
+			(at 185.42 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "b8b051c8-d606-4ca6-8510-68bc1a067daa")
 		)
@@ -5560,6 +5569,15 @@
 			)
 		)
 		(property "MPN_Eurocircuit" ""
+			(at 49.53 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "OrderStatus" "manual"
 			(at 49.53 180.34 0)
 			(effects
 				(font
@@ -5699,6 +5717,15 @@
 			)
 		)
 		(property "MPN_Eurocircuit" ""
+			(at 135.89 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "OrderStatus" "manual"
 			(at 135.89 116.84 0)
 			(effects
 				(font
@@ -6011,6 +6038,15 @@
 				(hide yes)
 			)
 		)
+		(property "OrderStatus" "manual"
+			(at 133.35 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "4"
 			(uuid "6245b803-30c0-4dcc-ad34-8e0a5333f29e")
 		)
@@ -6201,6 +6237,15 @@
 			)
 		)
 		(property "MPN_Eurocircuit" ""
+			(at 53.34 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "OrderStatus" "dnp"
 			(at 53.34 160.02 0)
 			(effects
 				(font

@@ -1,0 +1,44 @@
+Polyfuse
+4     https://www.reichelt.de/de/en/resettable-fuses-max-40-a-30-v-6-6-s-pfra-110-p35211.html?r=1
+      mouser
+     https://www.digikey.de/de/products/detail/schurter-inc/PFRA-110/639821
+
+LEDs
+je 4  reichelt
+      mouser
+      red:   https://www.digikey.de/de/products/detail/cree-led/C503B-RAN-CZ0C0AA2/6561762
+      amber: https://www.digikey.de/de/products/detail/cree-led/C503B-ACN-CY0Z0252-030/2341518
+      green: https://www.digikey.de/de/products/detail/cree-led/C503B-GCN-CY0C0792/2341572
+      blue:  https://www.digikey.de/de/products/detail/cree-led/C503B-BCN-CV0Z0461/1922945
+Summer
+4            https://www.digikey.de/de/products/detail/pui-audio-inc/AI-3035-TWT-3V-R/1745457
+
+Diode 0805
+4     reichelt
+      mouser
+      https://www.digikey.de/de/products/detail/taiwan-semiconductor-corporation/TS4148-RBG/15926409
+
+AO3401A
+16    https://www.reichelt.de/mosfet-p-ch-30v-4a-0-041r-sot-23-ao-3401a-p166486.html
+      nicht bei mouser
+      https://www.digikey.de/de/products/detail/alpha-omega-semiconductor-inc/AO3401A/1855773
+
+CSD16406Q3
+8     nicht bei reichelt
+      https://www.mouser.de/ProductDetail/Texas-Instruments/CSD16406Q3
+      https://www.digikey.de/de/products/detail/texas-instruments/CSD16406Q3/2038306
+
+MMBT3906
+4     reichelt
+      mouser
+      https://www.digikey.de/de/products/detail/diotec-semiconductor/MMBT3906/13163222
+
+BQ29705
+4     reichelt
+      mouser
+      https://www.digikey.de/de/products/detail/texas-instruments/BQ29705DSER/4899789
+
+
+
+0 Ohm SMD R's
+10k SMD R's

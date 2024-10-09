@@ -1549,6 +1549,16 @@
 	)
 	(wire
 		(pts
+			(xy 74.93 135.89) (xy 81.28 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "acb54864-9113-4b36-911d-e9f0698a941e")
+	)
+	(wire
+		(pts
 			(xy 53.34 60.96) (xy 64.77 60.96)
 		)
 		(stroke
@@ -1609,16 +1619,6 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 135.89) (xy 81.28 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cf660c62-e9fe-4e51-9789-0aa92db4b5d6")
-	)
-	(wire
-		(pts
 			(xy 53.34 53.34) (xy 83.82 53.34)
 		)
 		(stroke
@@ -1659,7 +1659,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 135.89) (xy 81.28 142.24)
+			(xy 81.28 135.89) (xy 81.28 165.1)
 		)
 		(stroke
 			(width 0)
@@ -1992,6 +1992,15 @@
 				(hide yes)
 			)
 		)
+		(property "OrderStatus" "assembly"
+			(at 59.69 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "3b7cd69d-38f4-453e-8f94-7aa213f46064")
 		)
@@ -2144,6 +2153,15 @@
 				(hide yes)
 			)
 		)
+		(property "OrderStatus" "assembly"
+			(at 87.63 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c3f3ffe8-53e6-44b4-80f3-110b4b3b37ae")
 		)
@@ -2230,6 +2248,15 @@
 				(hide yes)
 			)
 		)
+		(property "OrderStatus" "assembly"
+			(at 87.63 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7bc0fd67-62d3-42d6-9347-c4c93357d08d")
 		)
@@ -2299,6 +2326,15 @@
 			)
 		)
 		(property "MPN_Eurocircuit" ""
+			(at 71.12 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "OrderStatus" "order"
 			(at 71.12 123.19 0)
 			(effects
 				(font
@@ -2450,6 +2486,15 @@
 				(hide yes)
 			)
 		)
+		(property "OrderStatus" "order"
+			(at 71.12 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f3a2219e-c92f-44a3-ba02-fb4df59daadb")
 		)
@@ -2528,6 +2573,15 @@
 			)
 		)
 		(property "MPN_Eurocircuit" "GPR080547K"
+			(at 87.63 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "OrderStatus" "assembly"
 			(at 87.63 33.02 0)
 			(effects
 				(font
@@ -2622,6 +2676,15 @@
 				(hide yes)
 			)
 		)
+		(property "OrderStatus" "assembly"
+			(at 87.63 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "435e1c9b-2629-41a6-9b39-d28b9acedcd0")
 		)
@@ -2708,6 +2771,15 @@
 				(hide yes)
 			)
 		)
+		(property "OrderStatus" "assembly"
+			(at 106.68 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "bb4d5d3e-7873-4f18-b074-f6065a78292a")
 		)
@@ -2777,6 +2849,15 @@
 			)
 		)
 		(property "MPN_Eurocircuit" ""
+			(at 71.12 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "OrderStatus" "order"
 			(at 71.12 110.49 0)
 			(effects
 				(font
@@ -2871,6 +2952,15 @@
 				(hide yes)
 			)
 		)
+		(property "OrderStatus" "assembly"
+			(at 59.69 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4edaca83-6f35-4171-b42b-64308dd95059")
 		)
@@ -2940,6 +3030,15 @@
 			)
 		)
 		(property "MPN_Eurocircuit" ""
+			(at 45.72 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "OrderStatus" "manual"
 			(at 45.72 55.88 0)
 			(effects
 				(font
@@ -3078,6 +3177,15 @@
 				(hide yes)
 			)
 		)
+		(property "OrderStatus" "assembly"
+			(at 96.52 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f742b212-b538-4e31-9294-5781b0d2e8e3")
 		)
@@ -3164,6 +3272,15 @@
 				(hide yes)
 			)
 		)
+		(property "OrderStatus" "assembly"
+			(at 59.69 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2dc2b2f0-3aa9-4ca7-9d20-fad49fdca04e")
 		)
@@ -3181,7 +3298,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 81.28 142.24 0)
+		(at 81.28 165.1 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3190,7 +3307,7 @@
 		(fields_autoplaced yes)
 		(uuid "ff5af32b-4072-4e6a-ae4d-a3801404603c")
 		(property "Reference" "#PWR0802"
-			(at 81.28 148.59 0)
+			(at 81.28 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3199,7 +3316,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 81.28 147.32 0)
+			(at 81.28 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3207,7 +3324,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 81.28 142.24 0)
+			(at 81.28 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3216,7 +3333,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 81.28 142.24 0)
+			(at 81.28 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3225,7 +3342,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 81.28 142.24 0)
+			(at 81.28 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -730,6 +730,15 @@
 				(hide yes)
 			)
 		)
+		(property "OrderStatus" "assembly"
+			(at 163.83 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "c2000131-ef40-464c-bc99-626643ef72a3")
 		)
@@ -807,6 +816,15 @@
 			)
 		)
 		(property "MPN_Eurocircuit" "GPR08050R"
+			(at 163.83 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "OrderStatus" "assembly"
 			(at 163.83 74.93 0)
 			(effects
 				(font
@@ -900,6 +918,15 @@
 				(hide yes)
 			)
 		)
+		(property "OrderStatus" "assembly"
+			(at 156.21 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e2acbcd7-a190-4922-891d-8b6480000baf")
 		)
@@ -971,6 +998,15 @@
 			)
 		)
 		(property "MPN_Eurocircuit" ""
+			(at 138.43 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "OrderStatus" "manual"
 			(at 138.43 90.17 0)
 			(effects
 				(font
@@ -1148,6 +1184,15 @@
 				(hide yes)
 			)
 		)
+		(property "OrderStatus" "assembly"
+			(at 171.45 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2a5e93f0-ccd5-4689-97c1-c6389cb9894d")
 		)
@@ -1233,6 +1278,15 @@
 				(hide yes)
 			)
 		)
+		(property "OrderStatus" "assembly"
+			(at 156.21 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "436add06-c79a-41cb-8160-e83ef98e2513")
 		)
@@ -1310,6 +1364,15 @@
 			)
 		)
 		(property "MPN_Eurocircuit" "GPR08050R"
+			(at 171.45 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "OrderStatus" "assembly"
 			(at 171.45 77.47 0)
 			(effects
 				(font
