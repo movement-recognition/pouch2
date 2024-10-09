@@ -1,6 +1,6 @@
-[submodule "pouch2/lib/KiCad-RP-Pico"]
-	path = pouch2/lib/KiCad-RP-Pico
+[submodule "pcb/lib/KiCad-RP-Pico"]
+	path = pcb/lib/KiCad-RP-Pico
 	url = https://github.com/ncarandini/KiCad-RP-Pico
-[submodule "pouch2/lib/kicad-rpiz-uhat-template"]
-	path = pouch2/lib/kicad-rpiz-uhat-template
+[submodule "pcb/lib/kicad-rpiz-uhat-template"]
+	path = pcb/lib/kicad-rpiz-uhat-template
 	url = https://github.com/rkprojects/kicad-rpiz-uhat-template
