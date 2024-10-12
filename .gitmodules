@@ -4,3 +4,6 @@
 [submodule "pcb/lib/kicad-rpiz-uhat-template"]
 	path = pcb/lib/kicad-rpiz-uhat-template
 	url = https://github.com/rkprojects/kicad-rpiz-uhat-template
+[submodule "src/lib/pico-sdk"]
+	path = src/lib/pico-sdk
+	url = https://github.com/raspberrypi/pico-sdk
