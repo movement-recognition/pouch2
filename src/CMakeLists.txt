@@ -7,14 +7,17 @@ set(CMAKE_CXX_STANDARD 17)
 set(PICO_BOARD pico_w CACHE STRING "Board type")
 include(lib/pico-sdk/pico_sdk_init.cmake)
 
-project(pouch2)
+project(pouch_two)
 
 pico_sdk_init()
 
-add_executable(pouch2
+add_executable(pouch_two
     main.cpp
 )
 
-target_link_libraries(pouch2 pico_stdlib)
+pico_enable_stdio_usb(pouch_two 1)
+pico_enable_stdio_uart(pouch_two 0)
 
-pico_add_extra_outputs(pouch2)
+target_link_libraries(pouch_two pico_stdlib)
+
+pico_add_extra_outputs(pouch_two)

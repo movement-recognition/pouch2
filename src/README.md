@@ -3,7 +3,10 @@
 
 - You need to install at least the following packages (see the [SDK-Documentation](https://github.com/raspberrypi/pico-sdk) as well for further essential packages): `gcc gcc-libs jsoncpp arm-none-eabi-gcc arm-none-eabi-newlib`.
 
-- compile the software using cmake: `mkdir build; cd build; cmake -S .. -B .`
+- prepare the build-environment using cmake: `mkdir build; cd build; cmake -S .. -B `
+- build with `make` inside of the build-directory
+- after successful compilation, keep the "BOOTSEL"-button on the Pi Pico pressed and copy the `.uf2`-file from the build-directory onto the microcontroller via your file explorer.
+- un/replug the pico/PCB.
 
 
 ### troubleshooting
