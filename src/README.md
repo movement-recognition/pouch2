@@ -12,6 +12,7 @@
 ### troubleshooting
 
 - `ldconfig` after installing system-side-libraries
+- check if freeRTOS is in the right `smp`-branch
 
 ### further literature
 - [Connecting to the internet with Pico-W](https://datasheets.raspberrypi.com/picow/connecting-to-the-internet-with-pico-w.pdf)

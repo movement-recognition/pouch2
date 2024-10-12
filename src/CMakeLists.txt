@@ -20,8 +20,13 @@ add_executable(pouch_two
 pico_enable_stdio_usb(pouch_two 1)
 pico_enable_stdio_uart(pouch_two 0)
 
-target_include_directories(pouch_two PRIVATE ${CMAKE_CURRENT_LIST_DIR})
+target_include_directories(pouch_two PRIVATE ${CMAKE_CURRENT_LIST_DIR} lib/)
 
-target_link_libraries(pouch_two pico_stdlib FreeRTOS-Kernel FreeRTOS-Kernel-Heap4)
+target_link_libraries(pouch_two
+    pico_cyw43_arch_lwip_threadsafe_background
+    pico_stdlib
+    FreeRTOS-Kernel
+    FreeRTOS-Kernel-Heap4
+)
 
 pico_add_extra_outputs(pouch_two)
