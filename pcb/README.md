@@ -74,7 +74,6 @@ TODO:
 - [ ] document power draw of the components when finished
 - [ ] boost converter thingiy
 
-
 #### SIM-board
 For future expansion, a breakout for the SIM-module was added. Right now, only all GND-Pins are connected to the main ground plane. There are neither connections to power the SIM-module, nor to communicate with it. Please have a look at the schematic and the datasheet of the chip where to add connections. All pins are broken out to three connectors (J901, J902, J903).
 
@@ -114,3 +113,8 @@ there WILL be at least three viable options to upload data to or recieve from th
 |               | Bus 4        | 5 (output) |
 | PiZero        | CPU ready    | 28 / ADC2 (input) |
 | Battery       | Battery voltage | 26 / ADC0 (input) |
+| PiPico        | VSYS-voltage | (29) / ADC3 (input) |
+|               | on board LED | 25 (output) |
+
+
+important Note on using the ADC: To increase precision, set GPIO23 to HIGH during measurements. This toggles the power-supply to PWM-mode which results in less ripple.
