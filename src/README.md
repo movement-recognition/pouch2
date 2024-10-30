@@ -17,4 +17,5 @@
 ### further literature
 - [Connecting to the internet with Pico-W](https://datasheets.raspberrypi.com/picow/connecting-to-the-internet-with-pico-w.pdf)
 - [WiFi-Scan demo code](https://github.com/raspberrypi/pico-examples/blob/master/pico_w/wifi/wifi_scan)
+- [Multicore blog](https://ghubcoder.github.io/posts/using-multiple-cores-pico-freertos/)
 - [Multicore demo code](https://github.com/raspberrypi/pico-examples/blob/master/multicore/multicore_runner_queue/multicore_runner_queue.c)
