@@ -11,17 +11,21 @@
 #include "Acceleration_MPU6050_Sensor.h"
 
 int main() {
-
     // init uart
     stdio_init_all();
 
-    II2C *i2c_zero = new I2C_Bus(I2C_Bus_0);
 
+    for(int i = 0; i<10; i++) {
+        printf("booting…%d\n", i);
+        sleep_ms(1000);
+    }
+
+
+
+    II2C *i2c_zero = new I2C_Bus(I2C_Bus_0);
     // IAccelerationSensor *acceleration_sensor = new MPU6050_Sensor();
 
     // acceleration_sensor->initialize();
-
-    i2c_zero->print_scan();
 
 
     return 0;

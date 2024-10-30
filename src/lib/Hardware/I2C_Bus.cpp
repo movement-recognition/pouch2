@@ -5,7 +5,7 @@
 
 #include "I2C_Bus.h"
 
-I2C_Bus::I2C_Bus(I2C_Bus_Number bus_number, uint32_t baud_rate) {
+I2C_Bus::I2C_Bus(I2C_Bus_Number bus_number, uint32_t baud_rate, bool pullups) {
     uint8_t sda_pin;
     uint8_t scl_pin;
     if(bus_number == I2C_Bus_0) {
@@ -20,6 +20,11 @@ I2C_Bus::I2C_Bus(I2C_Bus_Number bus_number, uint32_t baud_rate) {
     i2c_init(i2c_number, baud_rate);
     gpio_set_function(PICO_DEFAULT_I2C_SDA_PIN, GPIO_FUNC_I2C);
     gpio_set_function(PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C);
+    if(pullups) {
+        gpio_pull_up(PICO_DEFAULT_I2C_SDA_PIN);
+        gpio_pull_up(PICO_DEFAULT_I2C_SCL_PIN);
+    }
+
     bi_decl(bi_2pins_with_func(PICO_DEFAULT_I2C_SDA_PIN, PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C));
 }
 

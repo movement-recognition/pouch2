@@ -10,7 +10,7 @@ enum I2C_Bus_Number {I2C_Bus_0, I2C_Bus_1};
 class I2C_Bus: public II2C {
 
     public:
-        I2C_Bus(I2C_Bus_Number bus_number, uint32_t baud_rate=100*1000);
+        I2C_Bus(I2C_Bus_Number bus_number, uint32_t baud_rate=100*1000, bool pullups=false);
 
         void print_scan();
 
