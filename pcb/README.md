@@ -44,7 +44,8 @@ The LEDs are used for
 - D801: to be defined
 - D802: to be defined
 - D803: to be defined
-One of the LEDs may be replaced by a buzzer. This can be used to help synchronizing video footage to the data recorded by the pouch2.
+
+One of the LEDs may be replaced by a buzzer. This can be used to help synchronizing video footage to the data recorded.
 
 The Pin-Header U601 is designed for an eInk-Display. The microcontroller communicates with it using the second SPI-bus (called SPI1) (see section "data buses" down below for further details). 
 
@@ -82,3 +83,34 @@ there WILL be at least three viable options to upload data to or recieve from th
 - use the WiFi-Chip on board of the microcontroller.
 - use a LTE-Stick or similar plugged into the coprocessor.
 - use a LTE-Breakout connected to one of the UART-buses
+
+#### raspberry pi pico
+
+| Bus Name      | Bus Property | GPIO-Pin |
+|---------------|--------------|----------|
+| UART0 (debug) | TX           | 0        |
+|               | RX           | 1        |
+| UART1 (GPS)   | TX           | 8        |
+|               | RX           | 9        |
+| I²C 0 (Sensor)| SDA          | 6        |
+|               | SCL          | 7        |
+|SPI 0 (SD-Card)| TX           | 19       |
+|               | RX           | 16       |
+|               | SCK          | 18       |
+|               | CS           | 17       |
+|SPI 1 (Display)| TX           | 15       |
+|               | RX (DC-Pin)  | 12       |
+|               | SCK          | 14       |
+|               | CS           | 13       |
+| Display       | RST (output) | 11 (output) |
+|               | Busy         | 10 (input) |
+| LED           | D801 / left  | 22       |
+|               | D802 / center| 21       |
+|               | D803 / right | 20       |
+| HMI           | Campaign DIP | 27 / ADC1 (input) |
+| PowerSwitch   | Bus 1        | 2 (output) |
+|               | Bus 2        | 3 (output) |
+|               | Bus 3        | 4 (output) |
+|               | Bus 4        | 5 (output) |
+| PiZero        | CPU ready    | 28 / ADC2 (input) |
+| Battery       | Battery voltage | 26 / ADC0 (input) |
