@@ -1,4 +1,6 @@
 #include <stdexcept>
+#include <memory>
+#include <vector>
 #include "pico/stdlib.h"
 #include "pico/binary_info.h"
 #include "hardware/i2c.h"
@@ -60,4 +62,16 @@ void I2C_Bus::print_scan() {
         printf(addr % 16 == 15 ? "\n" : "  ");
     }
     printf("Done.\n");
+}
+
+int I2C_Bus::write_bytes(uint8_t addr, uint8_t* bytes, size_t length) {
+    return i2c_write_blocking(this->i2c_number, addr, bytes, length, false);
+}
+
+std::vector<uint8_t> I2C_Bus::read_bytes(uint8_t addr, uint8_t register_addr, size_t length) {    
+    std::unique_ptr<uint8_t[]> data(new uint8_t[length]);
+    i2c_write_blocking(this->i2c_number, addr, &register_addr, 1, true);
+    i2c_read_blocking(this->i2c_number, addr, data.get(), 1, false);
+
+    return std::vector<uint8_t>(data.get(), data.get() + sizeof(data.get()) / sizeof(data.get()[0]));
 }

@@ -13,6 +13,8 @@ class I2C_Bus: public II2C {
         I2C_Bus(I2C_Bus_Number bus_number, uint32_t baud_rate=100*1000, bool pullups=false);
 
         void print_scan();
+        std::vector<uint8_t> read_bytes(uint8_t addr, uint8_t register_addr, size_t length);
+        int write_bytes(uint8_t addr, uint8_t* bytes, size_t length);
 
     private:
         i2c_inst_t *i2c_number;

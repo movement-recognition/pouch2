@@ -20,13 +20,12 @@ int main() {
         sleep_ms(1000);
     }
 
-
-
     II2C *i2c_zero = new I2C_Bus(I2C_Bus_0);
-    // IAccelerationSensor *acceleration_sensor = new MPU6050_Sensor();
 
-    // acceleration_sensor->initialize();
 
+    IAccelerationSensor *imu_sensor = new MPU6050_Sensor(i2c_zero, 0x86, gyro_range_1000, accel_range_4g);
+
+    acceleration_struct as = imu_sensor->get_imu_data();
 
     return 0;
 }
