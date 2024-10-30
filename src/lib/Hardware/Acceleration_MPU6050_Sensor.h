@@ -31,7 +31,6 @@ enum mpu6050_accel_range {
 class MPU6050_Sensor: public IAccelerationSensor {
     public: 
         MPU6050_Sensor(II2C* i2c_bus, uint8_t i2c_addr=0x86, mpu6050_gyro_range gyro_range=gyro_range_1000, mpu6050_accel_range accel_range=accel_range_8g);
-        void initialize();
 
         acceleration_struct get_imu_data();
     

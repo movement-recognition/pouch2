@@ -9,12 +9,19 @@ MPU6050_Sensor::MPU6050_Sensor(II2C* i2c_bus, uint8_t i2c_addr, mpu6050_gyro_ran
 
 
     // configure MPU-sensor
+    
+    // register 25: sample rate divider
+    // 0: 1kHz, 1: 500Hz, 2: 333Hz, 3: 250 Hz
+    uint8_t gyro_payload[] = {0x19, 0x00};
+    this->i2c_bus->write_bytes(this->i2c_addr, gyro_payload, 2);
+    // register 26: activate low pass filter (184 Hz, F_s = 1kHz)
+    uint8_t gyro_payload[] = {0x1A, 0b00000001};
+    this->i2c_bus->write_bytes(this->i2c_addr, gyro_payload, 2);
 
     // gyroscope range
     uint8_t gyro_byte = (this->gyro_range << 3) && 0b00011000;
     uint8_t gyro_payload[] = {0x1B, gyro_byte};
     this->i2c_bus->write_bytes(this->i2c_addr, gyro_payload, 2);
-
     // accelerometer range
     uint8_t accel_byte = (this->accel_range << 3) && 0b00011000;
     uint8_t accel_payload[] = {0x1C, accel_byte};
