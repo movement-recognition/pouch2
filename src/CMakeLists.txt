@@ -20,6 +20,7 @@ add_executable(pouch_two
     PouchTasker.cpp
     lib/Hardware/Acceleration_MPU6050_Sensor.cpp
     lib/Hardware/I2C_Bus.cpp
+    lib/Simulators/SimAccelerationSensor.cpp
     main.cpp
 )
 
