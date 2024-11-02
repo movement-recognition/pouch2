@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "cstdint": "cpp",
+        "sx1280-hal.h": "c"
+    },
+    "C_Cpp.intelliSenseEngine": "default"
+}
