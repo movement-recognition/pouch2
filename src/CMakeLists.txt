@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.13...3.27)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
 set(PICO_BOARD pico_w CACHE STRING "Board type")
 include(lib/pico-sdk/pico_sdk_init.cmake)
@@ -15,13 +16,10 @@ project(pouch_two)
 
 pico_sdk_init()
 
-file(GLOB SOURCES
-    lib/*/*.h
-    lib/*/*.cpp
-)
-
 add_executable(pouch_two
-    ${SOURCES}
+    PouchTasker.cpp
+    lib/Hardware/Acceleration_MPU6050_Sensor.cpp
+    lib/Hardware/I2C_Bus.cpp
     main.cpp
 )
 
@@ -34,7 +32,7 @@ target_include_directories(pouch_two PRIVATE
     lib/Hardware/
     lib/Interfaces/
     lib/Simulators/
-    lib/Strucutres
+    lib/Strucutres/
 )
 
 target_link_libraries(pouch_two
@@ -44,6 +42,5 @@ target_link_libraries(pouch_two
     FreeRTOS-Kernel
     FreeRTOS-Kernel-Heap4
 )
-
 
 pico_add_extra_outputs(pouch_two)
