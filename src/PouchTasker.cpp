@@ -1,6 +1,4 @@
 #include <cstdio>
-// #include <stdio.h>
-
 #include "pico/stdlib.h"
 #include "pico/multicore.h"
 
@@ -12,36 +10,39 @@
 #include "projdefs.h"
 
 
-PouchTasker::PouchTasker(PouchTaskerConfig ptc) {
-    this->ptc = ptc;
+PouchTasker::PouchTasker(PouchTaskerConfig *ptc_) {
+    this->ptc = ptc_;
 }
 
-
 void PouchTasker::setup() {
-    std::printf("setup!\n");
-    xTaskCreate((TaskFunction_t)&PouchTasker::poll_imu_sensor, "PollSensorTask", 128, NULL, 2, NULL);
-    printf("setup done.\n");
+    xTaskCreate(
+        (TaskFunction_t)[](void* _this){
+            ((PouchTasker*) _this)->poll_imu_sensor();
+        },
+        "PollSensorTask", 1024, this, 2, NULL);
 }
 
 void PouchTasker::run() {
-    printf("start run!\n");
     vTaskStartScheduler();
-    printf("done running!\n");
 }
 
 
 void PouchTasker::poll_imu_sensor() {
     TickType_t xLastWakeTime;
 
-    printf("start polling\n");
-
-    for(;;) {
+    while(1) {
         xLastWakeTime = xTaskGetTickCount();
-        printf("polling %d!", get_absolute_time());
-        // acceleration_struct foo = this->ptc.imu_sensor->get_imu_data();
+        printf("polling\n");
+        printf("P1 %p\n", this->ptc);
+        printf("P2 %p\n", this->ptc->imu_sensor);
+
+        acceleration_struct foo = this->ptc->imu_sensor->get_imu_data();
+        printf("structy\n");
+        // printf("%jd\n", (uintmax_t)foo.accel_x);
         
-        //vTaskDelayUntil(&xLastWakeTime, this->ptc.imu_sensor_interval);
+        //vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(100));
         vTaskDelay(pdMS_TO_TICKS(100));
+        printf("after_task_delay\n");
     }
 }
 

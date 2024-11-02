@@ -13,13 +13,15 @@ struct PouchTaskerConfig {
 
 class PouchTasker {
     public:
-        PouchTasker(PouchTaskerConfig ptc); 
+        PouchTasker(PouchTaskerConfig *ptc_);
+    
+         
         void setup();
         void run();
 
-    private:
-        PouchTaskerConfig ptc;
         void poll_imu_sensor();
 
+    private:
+        PouchTaskerConfig *ptc;
 };
 #endif
