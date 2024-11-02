@@ -1,0 +1,28 @@
+stages:
+  - build
+
+.template-build-setup:
+  before_script:
+    - apt-get -y update
+    - export DEBIAN_FRONTEND=noninteractive; apt-get -y upgrade
+    - apt-get -y install python3 git tar build-essential make cmake gcc-arm-none-eabi
+  variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+
+
+job-build-uf2:
+  tags:
+    - docker
+  image: ubuntu
+  stage: build
+  extends: .template-build-setup
+  script:
+    - mkdir build;
+    - cmake -S src/ -B build/
+    - cd build
+    - make
+  
+  artifacts:
+    expire_in: 7d
+    paths:
+      - build/*.uf2
