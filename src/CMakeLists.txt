@@ -19,13 +19,14 @@ pico_sdk_init()
 add_executable(pouch_two
     PouchTasker.cpp
     lib/Hardware/Acceleration_MPU6050_Sensor.cpp
+    lib/Hardware/Environment_BME280_Sensor.cpp
     lib/Hardware/I2C_Bus.cpp
     lib/Simulators/SimAccelerationSensor.cpp
     main.cpp
 )
 
 pico_enable_stdio_usb(pouch_two 1)
-pico_enable_stdio_uart(pouch_two 0)
+pico_enable_stdio_uart(pouch_two 1)
 
 target_include_directories(pouch_two PRIVATE 
     ${CMAKE_CURRENT_LIST_DIR}

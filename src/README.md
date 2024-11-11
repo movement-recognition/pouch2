@@ -14,6 +14,18 @@
 - `ldconfig` after installing system-side-libraries
 - check if freeRTOS is in the right `smp`-branch
 
+#### debugging
+- use the [guide](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf) to setup debugging either with the hardware-box or through another Pi Pico (page 19). 
+- use openOCD to flash a binary to the DUT: `openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" -c "program pouch_two.elf verify reset exit"`
+- to open a debug-session in gdb:
+  1. `openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000"`
+  2. `gdb pouch_two.elf`
+  3. inside gdb, execute `> target remote localhost:3333`
+  4. `> monitor reset init`
+  5. `> continue`
+- other possible commands from inside gdb are: `load`, `b main` and many more. 
+
+
 ### further literature
 - [Connecting to the internet with Pico-W](https://datasheets.raspberrypi.com/picow/connecting-to-the-internet-with-pico-w.pdf)
 - [WiFi-Scan demo code](https://github.com/raspberrypi/pico-examples/blob/master/pico_w/wifi/wifi_scan)

@@ -6,40 +6,60 @@
 
 #include "PouchTasker.h"
 #include "Acceleration_MPU6050_Sensor.h"
+#include "Environment_BME280_Sensor.h"
 
 #include "SimAccelerationSensor.h"
 
 int main() {
+
+    gpio_init(25);
+    gpio_set_dir(25, GPIO_OUT);
+    
     // init uart
+    
     stdio_init_all();
+
+    stdio_usb_init();
+    // Setup the UART0 port as a seperate item
+    #define UART0_ID        uart0
+    #define UART0_BAUD_RATE 115200
+    #define UART0_TX_GP    0
+    #define UART0_RX_GP    1
+    uart_init(UART0_ID, UART0_BAUD_RATE);
+    gpio_set_function(UART0_TX_GP, GPIO_FUNC_UART);
+    gpio_set_function(UART0_RX_GP, GPIO_FUNC_UART);
+
+    uart_puts(UART0_ID, "UART0 with debug\n");
 
     for(int i = 0; i<5; i++) {
         printf("booting…%d\n", i);
-        sleep_ms(1000);
+        uart_puts(UART0_ID, "booting…\n");
+        gpio_put(25, 0);
+        sleep_ms(250);
+        gpio_put(25, 1);
+        sleep_ms(250);
+        gpio_put(25, 0);
+        sleep_ms(250);
+        gpio_put(25, 1);
+        sleep_ms(250);
     }
  
-    II2C *i2c_zero = new I2C_Bus(I2C_Bus_0, 100000U, true);
-    // i2c_zero->print_scan();
-
+    II2C *i2c_zero = new I2C_Bus(I2C_Bus_1, 6, 7, 100000U, true);
+    i2c_zero->print_scan();
+    sleep_ms(500);
+    
     PouchTaskerConfig *ptc = new PouchTaskerConfig();
-    IAccelerationSensor *foo = new SimAccelerationSensor();
-    printf("foo:\n");
-    printf("x=%d\n", foo->get_imu_data().accel_x);
-    printf("y=%d\n", foo->get_imu_data().accel_y);
-    ptc->imu_sensor = new SimAccelerationSensor();//new MPU6050_Sensor(i2c_zero, 0x86, gyro_range_1000, accel_range_4g);
-    printf("ptc:\n");
-    auto data = ptc->imu_sensor->get_imu_data();
-    printf("x=%d\n", data.accel_x);
-    printf("y=%d\n", data.accel_y);
-    ptc->imu_sensor_interval = 5;
+    ptc->imu_sensor = new MPU6050_Sensor(i2c_zero, 0x68, gyro_range_1000, accel_range_2g); // new SimAccelerationSensor();
+    ptc->imu_sensor_interval = 500; // TODO: set back to 5!
+
+    ptc->env_sensor = new BME280_Sensor(i2c_zero, 0x77);
+    ptc->env_sensor_interval = 500;
 
     PouchTasker *pt = new PouchTasker(ptc);
-    
-    // acceleration_struct as = imu_sensor->get_imu_data();
     
     pt->setup();
     pt->run();
 
-    foo->get_imu_data();
+    
     return 0;
 }

@@ -1,5 +1,6 @@
-#include "Acceleration_MPU6050_Sensor.h"
 #include <cstdint>
+#include <cstdio>
+#include "Acceleration_MPU6050_Sensor.h"
 
 MPU6050_Sensor::MPU6050_Sensor(II2C* i2c_bus, uint8_t i2c_addr, mpu6050_gyro_range gyro_range, mpu6050_accel_range accel_range) {
     this->i2c_bus = i2c_bus;
@@ -15,15 +16,15 @@ MPU6050_Sensor::MPU6050_Sensor(II2C* i2c_bus, uint8_t i2c_addr, mpu6050_gyro_ran
     uint8_t samplerate_payload[] = {0x19, 0x00};
     this->i2c_bus->write_bytes(this->i2c_addr, samplerate_payload, 2);
     // register 26: activate low pass filter (184 Hz, F_s = 1kHz)
-    uint8_t lowpass_payload[] = {0x1A, 0b00000001};
+    uint8_t lowpass_payload[] = {0x1A, 0b00000000};
     this->i2c_bus->write_bytes(this->i2c_addr, lowpass_payload, 2);
 
     // gyroscope range
-    uint8_t gyro_byte = (this->gyro_range << 3) && 0b00011000;
+    uint8_t gyro_byte = (this->gyro_range << 3) & 0b00011000;
     uint8_t gyro_payload[] = {0x1B, gyro_byte};
     this->i2c_bus->write_bytes(this->i2c_addr, gyro_payload, 2);
     // accelerometer range
-    uint8_t accel_byte = (this->accel_range << 3) && 0b00011000;
+    uint8_t accel_byte = (this->accel_range << 3) & 0b00011000;
     uint8_t accel_payload[] = {0x1C, accel_byte};
     this->i2c_bus->write_bytes(this->i2c_addr, accel_payload, 2);
 }
@@ -34,10 +35,8 @@ acceleration_struct MPU6050_Sensor::get_imu_data() {
 
     const uint32_t lookup_accel[] = {16384, 8192, 4096, 2048};
     const uint32_t lookup_gyro[] = {131072, 65565, 32768, 16384};
-    
-    std::vector<uint8_t> data = this->i2c_bus->read_bytes(this->i2c_addr, 0x3B, 14);
 
-    // raw data in 16-bit two's complement
+    std::vector<uint8_t> data = this->i2c_bus->read_bytes(this->i2c_addr, 0x3B, 14);
     raw_data_struct.accel_x = data[0] << 8 + data[1];
     raw_data_struct.accel_y = data[2] << 8 + data[3];
     raw_data_struct.accel_z = data[4] << 8 + data[5];
