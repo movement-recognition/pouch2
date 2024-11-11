@@ -44,7 +44,7 @@ int main() {
         sleep_ms(250);
     }
  
-    II2C *i2c_zero = new I2C_Bus(I2C_Bus_1, 6, 7, 100000U, true);
+    II2C *i2c_zero = new I2C_Bus(I2C_Bus_1, 6, 7, 400000U, true);
     i2c_zero->print_scan();
     sleep_ms(500);
     

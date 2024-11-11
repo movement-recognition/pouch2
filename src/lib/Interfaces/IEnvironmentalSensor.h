@@ -5,9 +5,9 @@
 
 struct environment_struct {
     // fixed point: all values 1000* (in Kelvin, percent etc.)
-    int32_t temperature = 0;
-    int32_t humidity = 0;
-    int32_t pressure = 0;
+    uint32_t temperature = 0;
+    uint32_t humidity = 0;
+    uint32_t pressure = 0;
 };
 
 class IEnvironmentalSensor {
