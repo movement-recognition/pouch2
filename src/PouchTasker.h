@@ -34,5 +34,8 @@ class PouchTasker {
         PouchTaskerConfig *ptc;
 
         QueueHandle_t message_queue_imu;
+
+        TaskHandle_t poll_imu_task;
+        TaskHandle_t poll_env_task;
 };
 #endif

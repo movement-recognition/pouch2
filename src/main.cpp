@@ -34,14 +34,7 @@ int main() {
     for(int i = 0; i<5; i++) {
         printf("booting…%d\n", i);
         uart_puts(UART0_ID, "booting…\n");
-        gpio_put(25, 0);
-        sleep_ms(250);
-        gpio_put(25, 1);
-        sleep_ms(250);
-        gpio_put(25, 0);
-        sleep_ms(250);
-        gpio_put(25, 1);
-        sleep_ms(250);
+        sleep_ms(500);
     }
  
     II2C *i2c_zero = new I2C_Bus(I2C_Bus_1, 6, 7, 400000U, true);
