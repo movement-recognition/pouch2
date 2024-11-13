@@ -67,6 +67,10 @@ All devices using the I²C-Bus can be removed from the I²C-Master by removing t
 
 TODO: Table of Resistor-Names and their corresponding I²C-Devices
 
+
+- BME280: supports up to High-speed mode (Hs) with 1.7 Mbit/s
+- MPU6050: supports up to Fast mode (Fs) with 400kHz
+
 #### power management
 
 TODO:
@@ -118,3 +122,8 @@ there WILL be at least three viable options to upload data to or recieve from th
 
 
 important Note on using the ADC: To increase precision, set GPIO23 to HIGH during measurements. This toggles the power-supply to PWM-mode which results in less ripple.
+
+
+### possible extension sensors
+- https://www.bosch-sensortec.com/media/boschsensortec/downloads/promotion_material/product-selector-en.pdf
+- https://www.bosch-sensortec.com/products/motion-sensors/imus/bmi260/

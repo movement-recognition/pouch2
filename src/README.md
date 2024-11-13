@@ -8,7 +8,6 @@
 - after successful compilation, keep the "BOOTSEL"-button on the Pi Pico pressed and copy the `.uf2`-file from the build-directory onto the microcontroller via your file explorer.
 - un/replug the pico/PCB.
 
-
 ### troubleshooting
 
 - `ldconfig` after installing system-side-libraries

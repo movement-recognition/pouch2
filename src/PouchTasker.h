@@ -30,6 +30,8 @@ class PouchTasker {
         void poll_imu_sensor();
         void poll_environmental_sensor(); 
 
+        void idle_core(uint8_t core_number);
+
     private:
         PouchTaskerConfig *ptc;
 
@@ -37,5 +39,7 @@ class PouchTasker {
 
         TaskHandle_t poll_imu_task;
         TaskHandle_t poll_env_task;
+        TaskHandle_t idle_core0_task;
+        TaskHandle_t idle_core1_task;
 };
 #endif

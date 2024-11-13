@@ -11,9 +11,10 @@
 #include "SimAccelerationSensor.h"
 
 int main() {
-
-    gpio_init(25);
-    gpio_set_dir(25, GPIO_OUT);
+    
+    // for now only used for debugging // TODO: remove
+    gpio_init(22);
+    gpio_set_dir(22, GPIO_OUT);
     
     // init uart
     
@@ -36,6 +37,9 @@ int main() {
         uart_puts(UART0_ID, "booting…\n");
         sleep_ms(500);
     }
+
+
+
  
     II2C *i2c_zero = new I2C_Bus(I2C_Bus_1, 6, 7, 400000U, true);
     i2c_zero->print_scan();
