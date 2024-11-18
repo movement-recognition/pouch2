@@ -11,3 +11,6 @@
 	path = src/lib/freeRTOS-Kernel
 	url = https://github.com/FreeRTOS/FreeRTOS-Kernel
 	branch = smp
+[submodule "src/lib/spi_sdcard"]
+	path = src/lib/spi_sdcard
+	url = https://github.com/carlk3/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico
