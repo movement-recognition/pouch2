@@ -28,9 +28,9 @@ BME280_Sensor::BME280_Sensor(II2C* i2c_bus, uint8_t i2c_addr) {
     this->calib_dig_H1 = calibBlockA[25];
     this->calib_dig_H2 = calibBlockB[1] << 8 | calibBlockB[0];
     this->calib_dig_H3 = calibBlockB[2];
-    this->calib_dig_H4 = (calibBlockB[4] & 0x0F) << 8| calibBlockB[3];
-    this->calib_dig_H5 = calibBlockB[5] << 8 | (calibBlockB[4] & 0xF0) >> 4;
-    this->calib_dig_H6 = calibBlockB[6];
+    this->calib_dig_H4 = ((int16_t)(int8_t)calibBlockB[3] * 16) | ((int16_t)(calibBlockB[4] & 0x0F));
+    this->calib_dig_H5 = ((int16_t)(int8_t)calibBlockB[5] * 16) | ((int16_t)(calibBlockB[4] >> 4));
+    this->calib_dig_H6 = (int8_t)calibBlockB[6];
 
     // set IIR-Filter settings
     uint8_t iir_filt[2] = {0xF5, 0b0010010};
@@ -48,9 +48,9 @@ environment_struct BME280_Sensor::get_environmental_data() {
     environment_struct data;
 
     std::vector<uint8_t> raw_data = this->i2c_bus->read_bytes(this->i2c_addr, 0xF7, 8);
-    int32_t raw_pressure = raw_data[0] << 12 | raw_data[1] << 4 | raw_data[2];
-    int32_t raw_temperature = raw_data[3] << 12 | raw_data[4] << 4 | raw_data[5];
-    int32_t raw_humidity = raw_data[6] << 8 | raw_data[7];
+    uint32_t raw_pressure = raw_data[0] << 12 | raw_data[1] << 4 | raw_data[2];
+    uint32_t raw_temperature = raw_data[3] << 12 | raw_data[4] << 4 | raw_data[5];
+    uint32_t raw_humidity = raw_data[6] << 8 | raw_data[7];
     data.temperature = this->compensate_temperature(raw_temperature);
     data.pressure = this->compensate_pressure(raw_pressure);
     data.humidity = this->compensate_humidity(raw_humidity);
@@ -83,45 +83,43 @@ int32_t BME280_Sensor::compensate_temperature(const int32_t raw_temperature) {
 }
 
 uint32_t BME280_Sensor::compensate_pressure(const int32_t raw_pressure) {
-    int32_t var1;
-    int32_t var2;
-    int32_t var3;
-    int32_t var4;
-    uint32_t var5;
+    int64_t var1;
+    int64_t var2;
+    int64_t var3;
+    int64_t var4;
     uint32_t pressure;
-    uint32_t pressure_min = 30000;
-    uint32_t pressure_max = 110000;
+    uint32_t pressure_min = 3000000;
+    uint32_t pressure_max = 11000000;
 
-    var1 = (((int32_t)this->calib_t_fine) / 2) - (int32_t)64000;
-    var2 = (((var1 / 4) * (var1 / 4)) / 2048) * ((int32_t)this->calib_dig_P6);
-    var2 = var2 + ((var1 * ((int32_t)this->calib_dig_P5)) * 2);
-    var2 = (var2 / 4) + (((int32_t)this->calib_dig_P4) * 65536);
-    var3 = (this->calib_dig_P3 * (((var1 / 4) * (var1 / 4)) / 8192)) / 8;
-    var4 = (((int32_t)this->calib_dig_P2) * var1) / 2;
-    var1 = (var3 + var4) / 262144;
-    var1 = (((32768 + var1)) * ((int32_t)this->calib_dig_P1)) / 32768;
+    var1 = ((int64_t)this->calib_t_fine) - 128000;
+    var2 = var1 * var1 * (int64_t)this->calib_dig_P6;
+    var2 = var2 + ((var1 * (int64_t)this->calib_dig_P5) * 131072);
+    var2 = var2 + (((int64_t)this->calib_dig_P4) * 34359738368);
+    var1 = ((var1 * var1 * (int64_t)this->calib_dig_P3) / 256) + ((var1 * ((int64_t)this->calib_dig_P2) * 4096));
+    var3 = ((int64_t)1) * 140737488355328;
+    var1 = (var3 + var1) * ((int64_t)this->calib_dig_P1) / 8589934592;
 
-    /* avoid exception caused by division by zero */
-    if (var1) {
-        var5 = (uint32_t)((uint32_t)1048576) - raw_pressure;
-        pressure = ((uint32_t)(var5 - (uint32_t)(var2 / 4096))) * 3125;
+    /* To avoid divide by zero exception */
+    if (var1 != 0)
+    {
+        var4 = 1048576 - raw_pressure;
+        var4 = (((var4 * INT64_C(2147483648)) - var2) * 3125) / var1;
+        var1 = (((int64_t)this->calib_dig_P9) * (var4 / 8192) * (var4 / 8192)) / 33554432;
+        var2 = (((int64_t)this->calib_dig_P8) * var4) / 524288;
+        var4 = ((var4 + var1 + var2) / 256) + (((int64_t)this->calib_dig_P7) * 16);
+        pressure = (uint32_t)(((var4 / 2) * 100) / 128);
 
-        if (pressure < 0x80000000) {
-            pressure = (pressure << 1) / ((uint32_t)var1);
-        } else {
-            pressure = (pressure / (uint32_t)var1) * 2;
-        }
-
-        var1 = (((int32_t)this->calib_dig_P9) * ((int32_t)(((pressure / 8) * (pressure / 8)) / 8192))) / 4096;
-        var2 = (((int32_t)(pressure / 4)) * ((int32_t)this->calib_dig_P8)) / 8192;
-        pressure = (uint32_t)((int32_t)pressure + ((var1 + var2 + this->calib_dig_P7) / 16));
-
-        if (pressure < pressure_min) {
+        if (pressure < pressure_min)
+        {
             pressure = pressure_min;
-        } else if (pressure > pressure_max) {
+        }
+        else if (pressure > pressure_max)
+        {
             pressure = pressure_max;
         }
-    } else {
+    }
+    else
+    {
         pressure = pressure_min;
     }
 
