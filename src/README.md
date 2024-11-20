@@ -31,3 +31,4 @@
 - [Multicore blog](https://ghubcoder.github.io/posts/using-multiple-cores-pico-freertos/)
 - [Multicore demo code](https://github.com/raspberrypi/pico-examples/blob/master/multicore/multicore_runner_queue/multicore_runner_queue.c)
 - [fatfs-library](https://github.com/elehobica/pico_fatfs)
+- [TFLite-lib for pico](https://github.com/raspberrypi/pico-tflmicro/)
