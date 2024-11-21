@@ -23,7 +23,6 @@ add_executable(pouch_two
     lib/Hardware/I2C_Bus.cpp
     lib/Hardware/SDCardSocket.cpp
     lib/Simulators/SimAccelerationSensor.cpp
-    lib/spi_sdcard/src/src/FatFsSd.cpp # not included in the submodules CMakeLists.txt
     main.cpp
 )
 
@@ -40,15 +39,12 @@ target_include_directories(pouch_two PRIVATE
     lib/spi_sdcard/include/
 )
 
-add_subdirectory(lib/spi_sdcard/src/ build)
-
 target_link_libraries(pouch_two
     # pico_cyw43_arch_lwip_threadsafe_background
     pico_stdlib
     hardware_i2c
     FreeRTOS-Kernel
     FreeRTOS-Kernel-Heap4
-    no-OS-FatFS-SD-SDIO-SPI-RPi-Pico
 )
 
 pico_add_extra_outputs(pouch_two)

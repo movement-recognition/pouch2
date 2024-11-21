@@ -40,9 +40,9 @@ int main() {
     }
 
     printf("initializing sd_card;");
-    IFileIO *io_storage = new SDCardSocket();
+    IFileIO *io_storage = new SDCardSocket(true);
     printf("initialized sd_card;");
-    std::vector<uint8_t> foo;
+    std::string foo = "";
     io_storage->write_line(foo);
     printf("wrote to sd_card;");
  
