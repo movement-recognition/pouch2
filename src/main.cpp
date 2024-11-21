@@ -3,7 +3,8 @@
 
 #include "II2C.h"
 #include "I2C_Bus.h"
-
+#include "IFileIO.h"
+#include "SDCardSocket.h"
 #include "PouchTasker.h"
 #include "Acceleration_MPU6050_Sensor.h"
 #include "Environment_BME280_Sensor.h"
@@ -38,8 +39,12 @@ int main() {
         sleep_ms(500);
     }
 
-
-
+    printf("initializing sd_card;");
+    IFileIO *io_storage = new SDCardSocket();
+    printf("initialized sd_card;");
+    std::vector<uint8_t> foo;
+    io_storage->write_line(foo);
+    printf("wrote to sd_card;");
  
     II2C *i2c_zero = new I2C_Bus(I2C_Bus_1, 6, 7, 400000U, true);
     i2c_zero->print_scan();
