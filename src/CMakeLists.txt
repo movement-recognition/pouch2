@@ -36,8 +36,9 @@ target_include_directories(pouch_two PRIVATE
     lib/Interfaces/
     lib/Simulators/
     lib/Strucutres/
-    lib/spi_sdcard/include/
 )
+
+add_subdirectory(lib/pico_fatfs)
 
 target_link_libraries(pouch_two
     # pico_cyw43_arch_lwip_threadsafe_background
@@ -45,6 +46,7 @@ target_link_libraries(pouch_two
     hardware_i2c
     FreeRTOS-Kernel
     FreeRTOS-Kernel-Heap4
+    pico_fatfs
 )
 
 pico_add_extra_outputs(pouch_two)

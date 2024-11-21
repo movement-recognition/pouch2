@@ -11,3 +11,6 @@
 	path = src/lib/freeRTOS-Kernel
 	url = https://github.com/FreeRTOS/FreeRTOS-Kernel
 	branch = smp
+[submodule "src/lib/pico_fatfs"]
+	path = src/lib/pico_fatfs
+	url = https://github.com/elehobica/pico_fatfs
