@@ -1,3 +1,7 @@
+## findings of 2024-11-21: debugging SD-SPI0:
+SPI behaves weirdly with `pico_fatfs`-library.
+![weird behaviour](asset/spi_weird_behaviour.png)
+
 ## findings of 2024-11-13
 - 10kHz freeRTOS Tick frequency
 - 400kHz I²C
