@@ -3,6 +3,7 @@
 
 #include <cstdint>
 #include <vector>
+#include <map>
 #include <string>
 
 #include "tf_card.h"
@@ -15,8 +16,9 @@ class SDCardSocket: public IFileIO {
         SDCardSocket(bool foo);
         void mount_card();
         void open_file(std::string filename);
-        void write_line(std::string string);
-        void close_file(std::string filename);
+        void write_line(std::string data);
+        void write_line(char* data);
+        void close_file();
     private:
         char mount_name;
         

@@ -5,6 +5,7 @@
 
 struct environment_struct {
     // fixed point: all values 1000* (in Kelvin, percent etc.)
+    int64_t timestamp = 0;
     uint32_t temperature = 0;
     uint32_t humidity = 0;
     uint32_t pressure = 0;

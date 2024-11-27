@@ -17,9 +17,7 @@ PouchTasker::PouchTasker(PouchTaskerConfig *ptc_) {
 }
 
 void PouchTasker::setup() {
-    // setup the Measurement-Queue
-    this->message_queue_imu = xQueueCreate(this->ptc->imu_message_queue_length, sizeof(std::unique_ptr<acceleration_struct>));
-
+    
     // setup the IMU-Task
     xTaskCreate(
         (TaskFunction_t)[](void* _this){
@@ -36,13 +34,21 @@ void PouchTasker::setup() {
         "PollEnvironmentTask", 256, this, 2, &(this->poll_env_task));    
     vTaskCoreAffinitySet(this->poll_env_task, 0x01);
 
+    // setup the eventqueue-to-sd-card-task
+    xTaskCreate(
+        (TaskFunction_t)[](void* _this){
+            ((PouchTasker*) _this)->write_queue_to_sd();
+        },
+        "WriteQueueToSD", 512, this, 2, &(this->write_queue_to_sd_task));    
+    vTaskCoreAffinitySet(this->write_queue_to_sd_task, 0x02);
+
 
     // setup the idle task for core 0
     xTaskCreate(
         (TaskFunction_t)[](void* _this){
             ((PouchTasker*) _this)->idle_core(0);
         },
-        "IdleCore0Task", 256, this, 1, &(this->idle_core0_task));
+        "IdleCore0Task", 128, this, 1, &(this->idle_core0_task));
     vTaskCoreAffinitySet(this->idle_core0_task, 0x01);
 
     // setup the idle task for core 1
@@ -64,18 +70,11 @@ void PouchTasker::poll_imu_sensor() {
 
     while(true) {
         xLastWakeTime = xTaskGetTickCount();
-        // copy the dataset into new pointer
-        std::unique_ptr<acceleration_struct> acceleration_data(new acceleration_struct(this->ptc->imu_sensor->get_imu_data()));
-        printf("a_data x=%d\ty=%d\tz=%d\n", acceleration_data->accel_x, acceleration_data->accel_y, acceleration_data->accel_z);
-        printf("g_data x=%d\ty=%d\tz=%d\n", acceleration_data->gyro_x, acceleration_data->gyro_y, acceleration_data->gyro_z);
-        printf("t      t=%d\n", acceleration_data->temperature);
-        // xQueueSendToBack(this->message_queue_imu, (void *)acceleration_data.get(), 0);
+        this->message_queue_imu.push(this->ptc->imu_sensor->get_imu_data());
         
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(this->ptc->imu_sensor_interval));
     }
 }
-
-
 
 
 void PouchTasker::poll_environmental_sensor() {
@@ -84,14 +83,35 @@ void PouchTasker::poll_environmental_sensor() {
     while(true) {
         xLastWakeTime = xTaskGetTickCount();
         
-        // copy the dataset into new pointer
-        std::unique_ptr<environment_struct> environmental_data(new environment_struct(this->ptc->env_sensor->get_environmental_data()));
-        // printf("a_data x=%d\ty=%d\tz=%d\n", acceleration_data->accel_x, acceleration_data->accel_y, acceleration_data->accel_z);
-        // xQueueSendToBack(this->message_queue_imu, (void *)acceleration_data.get(), 0);
+        environment_struct environmental_data = this->ptc->env_sensor->get_environmental_data();
         
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(this->ptc->env_sensor_interval));
     }
 }
+
+
+void PouchTasker::write_queue_to_sd() {
+    TickType_t xLastWakeTime;
+    const size_t buffer_size = 100;
+    char buffer[buffer_size];
+    acceleration_struct foo;
+    while(true) {
+        uint16_t len_queue_imu = this->message_queue_imu.size();
+        if(len_queue_imu >= this->ptc->sd_card_write_batch_size) {
+            this->ptc->sd_file_io->open_file("datalog.txt");
+            
+            while(!this->message_queue_imu.empty()) {
+                foo = this->message_queue_imu.front();
+                snprintf(buffer, buffer_size-1, "IMU;%lld;%d;%d;%d;%d;%d;%d;%d\n", foo.timestamp, foo.accel_x, foo.accel_y, foo.accel_z, foo.gyro_x, foo.gyro_y, foo.gyro_z, foo.temperature);
+                this->ptc->sd_file_io->write_line(buffer);
+                this->message_queue_imu.pop();
+            }
+            this->ptc->sd_file_io->close_file();
+        }
+        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(this->ptc->sd_card_queue_check_interval));
+    }
+}
+
 
 void PouchTasker::idle_core(uint8_t core_number) {
     if(core_number == 0) {

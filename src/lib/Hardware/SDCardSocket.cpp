@@ -1,3 +1,4 @@
+#include <cstring>
 #include "pico/stdlib.h"
 
 #include "tf_card.h"
@@ -63,18 +64,26 @@ void SDCardSocket::mount_card() {
 }
 
 void SDCardSocket::open_file(std::string filename) {
-    fr = f_open(&fil, filename.c_str(), FA_READ | FA_WRITE | FA_CREATE_ALWAYS);
+    fr = f_open(&fil, filename.c_str(), FA_READ | FA_WRITE | FA_CREATE_ALWAYS | FA_OPEN_APPEND);
 }
 
 void SDCardSocket::write_line(std::string data) {
-    uint8_t* buf = (uint8_t*) data.c_str();
-    size_t buf_size = 10;
+    char* buf = (char*) data.c_str();
+    size_t buf_size = std::strlen(buf);
     fr = f_write(&fil, buf, buf_size, &bw);
     if (fr != FR_OK || bw != buf_size) {
         printf("write failed %d %d\n", fr, bw);
     }
 }
 
-void SDCardSocket::close_file(std::string filename) {
+void SDCardSocket::write_line(char* data) {
+    size_t buf_size = std::strlen(data);
+    fr = f_write(&fil, data, buf_size, &bw);
+    if (fr != FR_OK || bw != buf_size) {
+        printf("write failed %d %d\n", fr, bw);
+    }
+}
+
+void SDCardSocket::close_file() {
     f_close(&fil);
 };

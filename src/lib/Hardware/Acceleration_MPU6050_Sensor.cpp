@@ -1,5 +1,6 @@
 #include <cstdint>
 #include <cstdio>
+#include <pico/time.h>
 #include "Acceleration_MPU6050_Sensor.h"
 
 MPU6050_Sensor::MPU6050_Sensor(II2C* i2c_bus, uint8_t i2c_addr, mpu6050_gyro_range gyro_range, mpu6050_accel_range accel_range) {
@@ -60,6 +61,7 @@ acceleration_struct MPU6050_Sensor::get_imu_data() {
     data_struct.gyro_z = (int32_t)(raw_data_struct.gyro_z * 1000000) / lookup_gyro[this->gyro_range];
 
     data_struct.temperature = (int32_t)(raw_data_struct.temperature * 1000) / 340 + 36530;
+    data_struct.timestamp = to_us_since_boot(get_absolute_time());
     
     return data_struct;
 }

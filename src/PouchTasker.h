@@ -1,11 +1,13 @@
 #ifndef POUCHTASKER_H
 #define POUCHTASKER
 #include <functional>
+#include <queue>
 
 #include "FreeRTOS.h"
 #include "queue.h"
 #include "IAccelerationSensor.h"
 #include "IEnvironmentalSensor.h"
+#include "IFileIO.h"
 
 struct PouchTaskerConfig {
     IAccelerationSensor *imu_sensor;
@@ -16,7 +18,9 @@ struct PouchTaskerConfig {
     uint32_t env_sensor_interval = 1000;
     size_t env_message_queue_length = 100;
 
-    // IFilesystem* filesystem;
+    IFileIO* sd_file_io;
+    uint32_t sd_card_queue_check_interval = 250;
+    uint8_t sd_card_write_batch_size = 20; // 50: equals four writes a second
 };
 
 class PouchTasker {
@@ -28,17 +32,20 @@ class PouchTasker {
         void run();
 
         void poll_imu_sensor();
-        void poll_environmental_sensor(); 
+        void poll_environmental_sensor();
+        void write_queue_to_sd();
 
         void idle_core(uint8_t core_number);
 
     private:
         PouchTaskerConfig *ptc;
 
-        QueueHandle_t message_queue_imu;
+        std::queue<acceleration_struct> message_queue_imu;
 
         TaskHandle_t poll_imu_task;
         TaskHandle_t poll_env_task;
+        TaskHandle_t write_queue_to_sd_task;
+
         TaskHandle_t idle_core0_task;
         TaskHandle_t idle_core1_task;
 };

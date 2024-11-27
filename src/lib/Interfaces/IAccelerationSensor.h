@@ -5,6 +5,7 @@
 
 struct acceleration_struct {
     // fixed point: all values 1000* (in m*s^-2 or deg*s^-1 or Kelvin)
+    int64_t timestamp = 0;
     int32_t accel_x = 0;
     int32_t accel_y = 0;
     int32_t accel_z = 0;

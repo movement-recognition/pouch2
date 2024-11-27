@@ -1,7 +1,7 @@
 #include <cstdint>
 #include <cstdio>
-#include "Environment_BME280_Sensor.h"
 #include <pico/time.h>
+#include "Environment_BME280_Sensor.h"
 
 BME280_Sensor::BME280_Sensor(II2C* i2c_bus, uint8_t i2c_addr) {
     this->i2c_bus = i2c_bus;
@@ -54,8 +54,8 @@ environment_struct BME280_Sensor::get_environmental_data() {
     data.temperature = this->compensate_temperature(raw_temperature);
     data.pressure = this->compensate_pressure(raw_pressure);
     data.humidity = this->compensate_humidity(raw_humidity);
-
-    printf("temp=%d\tpres=%d\thudy=%d\n", data.temperature, data.pressure, data.humidity);
+    data.timestamp = to_us_since_boot(get_absolute_time());
+    
     return data;
 }
 
