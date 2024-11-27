@@ -44,6 +44,7 @@ class PouchTasker {
         PouchTaskerConfig *ptc;
 
         std::queue<acceleration_struct> message_queue_imu;
+        std::queue<environment_struct> message_queue_env;
 
         TaskHandle_t poll_imu_task;
         TaskHandle_t poll_env_task;

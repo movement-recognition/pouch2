@@ -58,12 +58,44 @@ int main() {
     printf("setup of all peripherals\n");
     PouchTaskerConfig *ptc = new PouchTaskerConfig();
     ptc->imu_sensor = new MPU6050_Sensor(i2c_zero, 0x68, gyro_range_1000, accel_range_2g); // new SimAccelerationSensor();
-    ptc->imu_sensor_interval = 5; // TODO: set back to 5!
+    ptc->imu_sensor_interval = 5;
 
     ptc->env_sensor = new BME280_Sensor(i2c_zero, 0x77);
     ptc->env_sensor_interval = 500;
     
     ptc->sd_file_io = io_storage;
+
+
+
+
+    // DEBUG Playground
+
+    #define UART1_ID        uart1
+    #define UART1_BAUD_RATE 9600//115200
+    #define UART1_TX_GP    8
+    #define UART1_RX_GP    9
+    //gpio_set_dir(UART1_TX_GP, GPIO_IN);
+    gpio_set_dir(UART1_RX_GP, GPIO_IN);
+    //gpio_set_function(UART1_TX_GP, GPIO_FUNC_UART);
+    gpio_set_function(UART1_RX_GP, GPIO_FUNC_UART);
+    uart_init(UART1_ID, UART1_BAUD_RATE);
+
+    char* command = "$PMTK251,9600*1F";//"$PMTK220,1000*1F";
+    
+    while(true) {
+        uart_puts(uart1, command);
+        sleep_ms(1000);
+    }
+    
+    while(true) {
+        sleep_ms(1000);
+        printf(".");
+    }
+
+    // END DEBUG Playground
+
+
+
 
     printf("setup pouch tasker\n");
     PouchTasker *pt = new PouchTasker(ptc);

@@ -78,6 +78,7 @@ void PouchTasker::poll_imu_sensor() {
 
     while(true) {
         xLastWakeTime = xTaskGetTickCount();
+
         this->message_queue_imu.push(this->ptc->imu_sensor->get_imu_data());
         
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(this->ptc->imu_sensor_interval));
@@ -91,7 +92,7 @@ void PouchTasker::poll_environmental_sensor() {
     while(true) {
         xLastWakeTime = xTaskGetTickCount();
         
-        environment_struct environmental_data = this->ptc->env_sensor->get_environmental_data();
+        this->message_queue_env.push(this->ptc->env_sensor->get_environmental_data());
         
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(this->ptc->env_sensor_interval));
     }
@@ -102,7 +103,8 @@ void PouchTasker::write_queue_to_sd() {
     TickType_t xLastWakeTime;
     const size_t buffer_size = 100;
     char buffer[buffer_size];
-    acceleration_struct foo;
+    acceleration_struct imu_data;
+    environment_struct env_data;
 
     this->ptc->sd_file_io->open_file("datalog.txt");
     while(true) {
@@ -110,16 +112,24 @@ void PouchTasker::write_queue_to_sd() {
 
         uint16_t len_queue_imu = this->message_queue_imu.size();
         if(len_queue_imu >= this->ptc->sd_card_write_batch_size) {
-            
-            
+                        
             while(!this->message_queue_imu.empty()) {
-                foo = this->message_queue_imu.front();
-                snprintf(buffer, buffer_size-1, "IMU;%lld;%d;%d;%d;%d;%d;%d;%d\n", foo.timestamp, foo.accel_x, foo.accel_y, foo.accel_z, foo.gyro_x, foo.gyro_y, foo.gyro_z, foo.temperature);
+                imu_data = this->message_queue_imu.front();
+                snprintf(buffer, buffer_size-1, "IMU;%lld;%d;%d;%d;%d;%d;%d;%d\n", imu_data.timestamp, imu_data.accel_x, imu_data.accel_y, imu_data.accel_z, imu_data.gyro_x, imu_data.gyro_y, imu_data.gyro_z, imu_data.temperature);
                 this->ptc->sd_file_io->write_line(buffer);
                 this->message_queue_imu.pop();
             }
             this->ptc->sd_file_io->flush();
         }
+
+        while(!this->message_queue_env.empty()) {
+            env_data = this->message_queue_env.front();
+            snprintf(buffer, buffer_size-1, "ENV;%lld;%d;%d;%d\n", env_data.timestamp, env_data.temperature, env_data.humidity, env_data.pressure);
+            this->message_queue_env.pop();
+        }
+        this->ptc->sd_file_io->flush();
+
+
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(this->ptc->sd_card_queue_check_interval));
     }
     this->ptc->sd_file_io->close_file();
@@ -130,7 +140,7 @@ void PouchTasker::update_hmi() {
 
     while(true) {
         xLastWakeTime = xTaskGetTickCount();
-        
+
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(1000));
     }
 
