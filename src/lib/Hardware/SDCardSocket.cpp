@@ -64,7 +64,9 @@ void SDCardSocket::mount_card() {
 }
 
 void SDCardSocket::open_file(std::string filename) {
-    fr = f_open(&fil, filename.c_str(), FA_READ | FA_WRITE | FA_CREATE_ALWAYS | FA_OPEN_APPEND);
+    fr = f_open(&fil, filename.c_str(), FA_READ | FA_WRITE | FA_OPEN_APPEND);
+    FSIZE_t size = f_size(&fil);
+    f_lseek(&fil, size);
 }
 
 void SDCardSocket::write_line(std::string data) {
@@ -82,6 +84,14 @@ void SDCardSocket::write_line(char* data) {
     if (fr != FR_OK || bw != buf_size) {
         printf("write failed %d %d\n", fr, bw);
     }
+}
+
+void SDCardSocket::flush() {
+    f_sync(&fil);
+}
+
+size_t SDCardSocket::get_file_size() {
+    return f_size(&fil);
 }
 
 void SDCardSocket::close_file() {

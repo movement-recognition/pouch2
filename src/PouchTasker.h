@@ -33,7 +33,10 @@ class PouchTasker {
 
         void poll_imu_sensor();
         void poll_environmental_sensor();
+
         void write_queue_to_sd();
+
+        void update_hmi();
 
         void idle_core(uint8_t core_number);
 
@@ -44,7 +47,10 @@ class PouchTasker {
 
         TaskHandle_t poll_imu_task;
         TaskHandle_t poll_env_task;
+
         TaskHandle_t write_queue_to_sd_task;
+        
+        TaskHandle_t update_hmi_task;
 
         TaskHandle_t idle_core0_task;
         TaskHandle_t idle_core1_task;

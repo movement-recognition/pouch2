@@ -22,13 +22,13 @@ int main() {
     stdio_init_all();
     stdio_usb_init();
     // Setup the UART0 port as a seperate item
-    // #define UART0_ID        uart0
-    // #define UART0_BAUD_RATE 115200
-    // #define UART0_TX_GP    0
-    // #define UART0_RX_GP    1
-    // uart_init(UART0_ID, UART0_BAUD_RATE);
-    // gpio_set_function(UART0_TX_GP, GPIO_FUNC_UART);
-    // gpio_set_function(UART0_RX_GP, GPIO_FUNC_UART);
+    #define UART0_ID        uart0
+    #define UART0_BAUD_RATE 115200
+    #define UART0_TX_GP    0
+    #define UART0_RX_GP    1
+    uart_init(UART0_ID, UART0_BAUD_RATE);
+    gpio_set_function(UART0_TX_GP, GPIO_FUNC_UART);
+    gpio_set_function(UART0_RX_GP, GPIO_FUNC_UART);
 
 
     for(int i = 0; i<5; i++) {
@@ -72,6 +72,8 @@ int main() {
     printf("run tasker\n");
     pt->run();
 
-    
+    while(true) {
+        asm("nop");
+    }
     return 0;
 }

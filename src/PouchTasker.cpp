@@ -17,7 +17,7 @@ PouchTasker::PouchTasker(PouchTaskerConfig *ptc_) {
 }
 
 void PouchTasker::setup() {
-    
+
     // setup the IMU-Task
     xTaskCreate(
         (TaskFunction_t)[](void* _this){
@@ -41,6 +41,14 @@ void PouchTasker::setup() {
         },
         "WriteQueueToSD", 512, this, 2, &(this->write_queue_to_sd_task));    
     vTaskCoreAffinitySet(this->write_queue_to_sd_task, 0x02);
+
+    // setup HMI-task
+    xTaskCreate(
+        (TaskFunction_t)[](void* _this){
+            ((PouchTasker*) _this)->update_hmi();
+        },
+        "UpdateHMI", 128, this, 2, &(this->update_hmi_task));    
+    vTaskCoreAffinitySet(this->update_hmi_task, 0x02);
 
 
     // setup the idle task for core 0
@@ -95,10 +103,14 @@ void PouchTasker::write_queue_to_sd() {
     const size_t buffer_size = 100;
     char buffer[buffer_size];
     acceleration_struct foo;
+
+    this->ptc->sd_file_io->open_file("datalog.txt");
     while(true) {
+        xLastWakeTime = xTaskGetTickCount();
+
         uint16_t len_queue_imu = this->message_queue_imu.size();
         if(len_queue_imu >= this->ptc->sd_card_write_batch_size) {
-            this->ptc->sd_file_io->open_file("datalog.txt");
+            
             
             while(!this->message_queue_imu.empty()) {
                 foo = this->message_queue_imu.front();
@@ -106,12 +118,23 @@ void PouchTasker::write_queue_to_sd() {
                 this->ptc->sd_file_io->write_line(buffer);
                 this->message_queue_imu.pop();
             }
-            this->ptc->sd_file_io->close_file();
+            this->ptc->sd_file_io->flush();
         }
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(this->ptc->sd_card_queue_check_interval));
     }
+    this->ptc->sd_file_io->close_file();
 }
 
+void PouchTasker::update_hmi() {
+    TickType_t xLastWakeTime;
+
+    while(true) {
+        xLastWakeTime = xTaskGetTickCount();
+        
+        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(1000));
+    }
+
+}
 
 void PouchTasker::idle_core(uint8_t core_number) {
     if(core_number == 0) {

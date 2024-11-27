@@ -18,7 +18,9 @@ class SDCardSocket: public IFileIO {
         void open_file(std::string filename);
         void write_line(std::string data);
         void write_line(char* data);
+        void flush();
         void close_file();
+        size_t get_file_size();
     private:
         char mount_name;
         
