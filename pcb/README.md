@@ -127,3 +127,17 @@ important Note on using the ADC: To increase precision, set GPIO23 to HIGH durin
 ### possible extension sensors
 - https://www.bosch-sensortec.com/media/boschsensortec/downloads/promotion_material/product-selector-en.pdf
 - https://www.bosch-sensortec.com/products/motion-sensors/imus/bmi260/
+
+### changes for next PCB-iteration
+
+#### essential
+- [x] ground plane of SD-Card-Header is not connected
+- [x] add capacitor next to SD-Card-Header
+- [ ] RX/TX are flipped RX>TX and TX>RX on the connection between Pico and GPS-modules
+- [ ] add Pullup-Resistor to GPS_VCC and Testpoint for "V_BCKP" of U302 and "3.3V" of U301 (the GPS modules)
+- [ ] add capacitors next to all expansion boards
+
+#### nice to have
+- [ ] add capacitors for each power rail (e.g. behind the mosfets)
+- [ ] add a second breakout for SD-SPI (e.g. next to the breakouts at the top/bottom)
+- [ ] add footprints for extension sensors (see section above, e.g. Bosch BMI260)
