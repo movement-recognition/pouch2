@@ -1,19 +1,23 @@
 #include <stdio.h>
-#include "pico/stdlib.h"
+#include <pico/stdlib.h>
 
 #include "II2C.h"
 #include "I2C_Bus.h"
 #include "IFileIO.h"
-#include "SDCardSocket.h"
+
 #include "PouchTasker.h"
 #include "Acceleration_MPU6050_Sensor.h"
 #include "Environment_BME280_Sensor.h"
-
-#include "SimAccelerationSensor.h"
+#include "SDCardSocket.h"
+#include "GPS_NMEA.h"
 
 int main() {
 
      // for now only used for debugging // TODO: remove
+    gpio_init(20);
+    gpio_set_dir(20, GPIO_OUT);
+    gpio_init(21);
+    gpio_set_dir(21, GPIO_OUT);
     gpio_init(22);
     gpio_set_dir(22, GPIO_OUT);
 
@@ -36,6 +40,17 @@ int main() {
         sleep_ms(500);
     }
 
+    GPS_NMEA foo = GPS_NMEA(uart1, 9600, 9, 8);
+    while(true) {
+        foo.poll();
+        sleep_ms(20);
+        foo.get_fix();
+    }
+    
+    return 0;
+
+    // DEBUG
+
     // TODO: replace all new()-initializiations with unique_ptr!
 
     printf("initializing sd_card\n");
@@ -54,7 +69,8 @@ int main() {
     II2C *i2c_zero = new I2C_Bus(I2C_Bus_1, 6, 7, 400000U, true);
     i2c_zero->print_scan();
     printf("initialized i2c-bus\n");
-    
+
+
     printf("setup of all peripherals\n");
     PouchTaskerConfig *ptc = new PouchTaskerConfig();
     ptc->imu_sensor = new MPU6050_Sensor(i2c_zero, 0x68, gyro_range_1000, accel_range_2g); // new SimAccelerationSensor();
@@ -63,38 +79,15 @@ int main() {
     ptc->env_sensor = new BME280_Sensor(i2c_zero, 0x77);
     ptc->env_sensor_interval = 500;
     
+    ptc->gps_sensor = new GPS_NMEA(uart1, 9600, 9, 8);
+    ptc->gps_sensor_interval = 50; // TODO: refine this interval as the sensors outputs data all the time!
+
     ptc->sd_file_io = io_storage;
 
-
-
+    printf("peripherals setup complete.\n");
 
     // DEBUG Playground
-
-    #define UART1_ID        uart1
-    #define UART1_BAUD_RATE 9600//115200
-    #define UART1_TX_GP    8
-    #define UART1_RX_GP    9
-    //gpio_set_dir(UART1_TX_GP, GPIO_IN);
-    gpio_set_dir(UART1_RX_GP, GPIO_IN);
-    //gpio_set_function(UART1_TX_GP, GPIO_FUNC_UART);
-    gpio_set_function(UART1_RX_GP, GPIO_FUNC_UART);
-    uart_init(UART1_ID, UART1_BAUD_RATE);
-
-    char* command = "$PMTK251,9600*1F";//"$PMTK220,1000*1F";
-    
-    while(true) {
-        uart_puts(uart1, command);
-        sleep_ms(1000);
-    }
-    
-    while(true) {
-        sleep_ms(1000);
-        printf(".");
-    }
-
     // END DEBUG Playground
-
-
 
 
     printf("setup pouch tasker\n");
@@ -107,5 +100,6 @@ int main() {
     while(true) {
         asm("nop");
     }
+    printf("exited tasker\n");
     return 0;
 }

@@ -6,6 +6,7 @@
 
 #include "lib/freeRTOS-Kernel/include/projdefs.h"
 #include "FreeRTOS.h"
+#include "portmacro.h"
 #include "task.h"
 
 #include "PouchTasker.h"
@@ -31,8 +32,16 @@ void PouchTasker::setup() {
         (TaskFunction_t)[](void* _this){
             ((PouchTasker*) _this)->poll_environmental_sensor();
         },
-        "PollEnvironmentTask", 256, this, 2, &(this->poll_env_task));    
+        "PollEnvironmentTask", 256, this, 3, &(this->poll_env_task));    
     vTaskCoreAffinitySet(this->poll_env_task, 0x01);
+
+    // setup the GPS-task
+    xTaskCreate(
+        (TaskFunction_t)[](void* _this){
+            ((PouchTasker*) _this)->poll_gnss_sensor();
+        },
+        "PollGNSSTask", 512, this, 3, &(this->poll_gnss_task));    
+    vTaskCoreAffinitySet(this->poll_gnss_task, 0x01);
 
     // setup the eventqueue-to-sd-card-task
     xTaskCreate(
@@ -47,7 +56,7 @@ void PouchTasker::setup() {
         (TaskFunction_t)[](void* _this){
             ((PouchTasker*) _this)->update_hmi();
         },
-        "UpdateHMI", 128, this, 2, &(this->update_hmi_task));    
+        "UpdateHMI", 128, this, 3, &(this->update_hmi_task));    
     vTaskCoreAffinitySet(this->update_hmi_task, 0x02);
 
 
@@ -91,10 +100,26 @@ void PouchTasker::poll_environmental_sensor() {
 
     while(true) {
         xLastWakeTime = xTaskGetTickCount();
-        
-        this->message_queue_env.push(this->ptc->env_sensor->get_environmental_data());
+        if(this->message_queue_env.size() < 10) {
+            this->message_queue_env.push(this->ptc->env_sensor->get_environmental_data());
+        } else {
+            printf("skipped adding to queue_env!\n");
+        }
         
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(this->ptc->env_sensor_interval));
+    }
+}
+
+void PouchTasker::poll_gnss_sensor() {
+    TickType_t xLastWakeTime;
+
+    while(true) {
+        xLastWakeTime = xTaskGetTickCount();
+        
+        this->ptc->gps_sensor->poll();
+
+
+        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(this->ptc->gps_sensor_interval));
     }
 }
 
@@ -149,13 +174,13 @@ void PouchTasker::update_hmi() {
 void PouchTasker::idle_core(uint8_t core_number) {
     if(core_number == 0) {
         while(true) {
-            // gpio_put(22, 0);
-            // gpio_put(22, 1);
+            gpio_put(22, 0);
+            gpio_put(22, 1);
         }
     } else if(core_number == 1) {
         while(true) {
-            // gpio_put(22, 0);
-            // gpio_put(22, 1);
+            gpio_put(21, 0);
+            gpio_put(21, 1);
         }
     }
     

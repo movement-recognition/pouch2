@@ -7,9 +7,10 @@ echo -e "\n\e[34m##### upload via openOCD #####\e[0m\n"
 openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" -c "program pouch_two.elf verify reset exit"
 status=$?
 if [ $status == 0 ]; then
-    echo "upload done!"
+    echo "upload done! now opening minicom. Exit with Ctrl+A > Q"
     sleep 2
-    putty -load "ACM0/115200"  
+    minicom -b 115200 -o -D /dev/ttyACM0
+    #putty -load "ACM0/115200"  
 else
     echo -e "\e[31mupload failed\e[0m"
 fi

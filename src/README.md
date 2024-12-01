@@ -12,6 +12,7 @@
 
 - `ldconfig` after installing system-side-libraries
 - check if freeRTOS is in the right `smp`-branch
+- printing with freertos on Core1 does *not* work properly. Just don't to avoid isr_hardfault-crashes.
 
 #### debugging
 - use the [guide](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf) to setup debugging either with the hardware-box or through another Pi Pico (page 19). 
@@ -24,6 +25,9 @@
   5. `> continue`
 - other possible commands from inside gdb are: `load`, `b main` and many more. 
 
+##### freertos inside of gdb
+- `pip install freertos-gdb` (see https://github.com/espressif/freertos-gdb)
+- run inside of gdb: `python import freertos_gdb`
 
 ### further literature
 - [Connecting to the internet with Pico-W](https://datasheets.raspberrypi.com/picow/connecting-to-the-internet-with-pico-w.pdf)

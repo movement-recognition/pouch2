@@ -22,6 +22,7 @@ add_executable(pouch_two
     lib/Hardware/Environment_BME280_Sensor.cpp
     lib/Hardware/I2C_Bus.cpp
     lib/Hardware/SDCardSocket.cpp
+    lib/Hardware/GPS_NMEA.cpp
     lib/Simulators/SimAccelerationSensor.cpp
     main.cpp
 )
@@ -36,9 +37,12 @@ target_include_directories(pouch_two PRIVATE
     lib/Interfaces/
     lib/Simulators/
     lib/Strucutres/
+    lib/lwgps/lwgps/src/include/lwgps/
 )
 
 add_subdirectory(lib/pico_fatfs)
+add_subdirectory(lib/lwgps)
+add_compile_definitions(LWGPS_CFG_STATEMENT_GPGGA=1)
 
 target_link_libraries(pouch_two
     # pico_cyw43_arch_lwip_threadsafe_background
@@ -47,6 +51,7 @@ target_link_libraries(pouch_two
     FreeRTOS-Kernel
     FreeRTOS-Kernel-Heap4
     pico_fatfs
+    lwgps
 )
 
 pico_add_extra_outputs(pouch_two)

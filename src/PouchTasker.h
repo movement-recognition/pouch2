@@ -1,9 +1,11 @@
 #ifndef POUCHTASKER_H
 #define POUCHTASKER
+#include <cstdint>
 #include <functional>
 #include <queue>
 
 #include "FreeRTOS.h"
+#include "IGlobalNavSatSystem.h"
 #include "queue.h"
 #include "IAccelerationSensor.h"
 #include "IEnvironmentalSensor.h"
@@ -21,6 +23,9 @@ struct PouchTaskerConfig {
     IFileIO* sd_file_io;
     uint32_t sd_card_queue_check_interval = 250;
     uint8_t sd_card_write_batch_size = 20; // 50: equals four writes a second
+
+    IGlobalNavSatSystem* gps_sensor;
+    uint32_t gps_sensor_interval = 50;
 };
 
 class PouchTasker {
@@ -33,6 +38,7 @@ class PouchTasker {
 
         void poll_imu_sensor();
         void poll_environmental_sensor();
+        void poll_gnss_sensor();
 
         void write_queue_to_sd();
 
@@ -43,11 +49,13 @@ class PouchTasker {
     private:
         PouchTaskerConfig *ptc;
 
+        TaskHandle_t poll_imu_task;
         std::queue<acceleration_struct> message_queue_imu;
+
+        TaskHandle_t poll_env_task;
         std::queue<environment_struct> message_queue_env;
 
-        TaskHandle_t poll_imu_task;
-        TaskHandle_t poll_env_task;
+        TaskHandle_t poll_gnss_task;
 
         TaskHandle_t write_queue_to_sd_task;
         
