@@ -1,3 +1,6 @@
+#include <cstdint>
+#include <hardware/uart.h>
+#include <pico/time.h>
 #include <stdio.h>
 #include <pico/stdlib.h>
 
@@ -41,10 +44,17 @@ int main() {
     }
 
     GPS_NMEA foo = GPS_NMEA(uart1, 9600, 9, 8);
+    sleep_ms(10);
+    printf("while loop\n");
     while(true) {
+        gpio_put(22, 0);
         foo.poll();
-        sleep_ms(20);
-        foo.get_fix();
+        gpio_put(22, 1);
+        uint64_t delta = to_us_since_boot(get_absolute_time()) - foo.last_message;
+        if(delta > 5000000 ) {
+            printf("restart delta!\n");
+            foo.restart();
+        }
     }
     
     return 0;
