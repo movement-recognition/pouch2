@@ -50,7 +50,7 @@ class GPS_NMEA: public IGlobalNavSatSystem {
         };
 
         // time references: https://gssc.esa.int/navipedia/index.php/Time_References_in_GNSS
-        GNSS_raw* get_data_field(char* buffer);
+        GNSS_raw* get_data_field(GNSS_constellation line_constellation);
         GNSS_raw GPS_data;
         GNSS_raw GLONASS_data;
         GNSS_raw GALILEO_data;

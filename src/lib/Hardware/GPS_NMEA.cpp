@@ -154,7 +154,7 @@ void GPS_NMEA::poll() {
                     segment++;
                 }
                 // switch the data dumping to the correct sub-structure
-                GNSS_raw *data = get_data_field(this->line_buffer);
+                GNSS_raw *data = get_data_field(line_constellation);
 
                 // reprocess coordinates
                 if (lat_ns == 'N') {
@@ -244,7 +244,7 @@ void GPS_NMEA::poll() {
                 // only update handler if state is valid ('A')
                 if (receiver_status == 'A') {
                     // switch the data dumping to the correct sub-structure
-                    GNSS_raw *data = get_data_field(this->line_buffer);                   
+                    GNSS_raw *data = get_data_field(line_constellation);                   
 
                     // reprocess coordinates
                     if (lat_ns == 'N') {
@@ -307,7 +307,7 @@ GNSS_position GPS_NMEA::get_fix() {
 
 uint64_t GPS_NMEA::get_timestamp() { return 0; }
 
-const GNSS_raw* GPS_NMEA::get_data_field(char* buffer) {
+GPS_NMEA::GNSS_raw* GPS_NMEA::get_data_field(GNSS_constellation line_constellation) {
     if (line_constellation == GNSS_constellation::GPS) {
         return &this->GPS_data;
     } else if (line_constellation == GNSS_constellation::GLONASS) {
