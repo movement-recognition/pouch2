@@ -1,6 +1,11 @@
+## findings of 2024-12-01: debugging with gdb and "freertos"-addon
+![Task view](asset/freertos_task_view.png)
+
 ## findings of 2024-11-21: debugging SD-SPI0:
 SPI behaves weirdly with `pico_fatfs`-library.
 ![weird behaviour](asset/spi_weird_behaviour.png)
+
+=> solved by resoldering
 
 ## findings of 2024-11-13
 - 10kHz freeRTOS Tick frequency

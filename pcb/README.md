@@ -125,6 +125,7 @@ important Note on using the ADC: To increase precision, set GPIO23 to HIGH durin
 
 
 ### possible extension sensors
+- Bosch BNO055 (9-axis IMU)
 - https://www.bosch-sensortec.com/media/boschsensortec/downloads/promotion_material/product-selector-en.pdf
 - https://www.bosch-sensortec.com/products/motion-sensors/imus/bmi260/
 

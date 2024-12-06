@@ -10,6 +10,10 @@ struct GNSS_position {
     int32_t altitude;
 };
 
+enum GNSS_constellation {
+    GPS, GLONASS, BEIDOU, GALILEO, UNKNOWN
+};
+
 class IGlobalNavSatSystem {
     public:
         IGlobalNavSatSystem() {};
