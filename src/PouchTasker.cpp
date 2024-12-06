@@ -1,5 +1,7 @@
+#include <cstdint>
 #include <cstdio>
 #include <memory>
+#include <inttypes.h>
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
 #include "pico/multicore.h"
@@ -24,7 +26,7 @@ void PouchTasker::setup() {
         (TaskFunction_t)[](void* _this){
             ((PouchTasker*) _this)->poll_imu_sensor();
         },
-        "PollIMUTask", 256, this, 2, &(this->poll_imu_task));
+        "PollIMUTask", 256, this, 3, &(this->poll_imu_task));
     vTaskCoreAffinitySet(this->poll_imu_task, 0x01);
     
     // setup the environmental-task
@@ -32,23 +34,30 @@ void PouchTasker::setup() {
         (TaskFunction_t)[](void* _this){
             ((PouchTasker*) _this)->poll_environmental_sensor();
         },
-        "PollEnvironmentTask", 256, this, 3, &(this->poll_env_task));    
+        "PollEnvironmentTask", 128, this, 2, &(this->poll_env_task));    
     vTaskCoreAffinitySet(this->poll_env_task, 0x01);
 
-    // setup the GPS-task
+    // setup the GPS-task (always running in the background to keep the serial-buffer empty)
+    xTaskCreate(
+        (TaskFunction_t)[](void* _this){
+            ((PouchTasker*) _this)->worker_gnss_sensor();
+        },
+        "WorkerGNSSTask", 128, this, 2, &(this->worker_gnss_task));    
+    vTaskCoreAffinitySet(this->worker_gnss_task, 0x01);
+
     xTaskCreate(
         (TaskFunction_t)[](void* _this){
             ((PouchTasker*) _this)->poll_gnss_sensor();
         },
-        "PollGNSSTask", 512, this, 3, &(this->poll_gnss_task));    
-    vTaskCoreAffinitySet(this->poll_gnss_task, 0x01);
+        "PollGNSSTask", 64, this, 2, &(this->poll_gnss_task));    
+    vTaskCoreAffinitySet(this->poll_gnss_task, 0x02);
 
     // setup the eventqueue-to-sd-card-task
     xTaskCreate(
         (TaskFunction_t)[](void* _this){
             ((PouchTasker*) _this)->write_queue_to_sd();
         },
-        "WriteQueueToSD", 512, this, 2, &(this->write_queue_to_sd_task));    
+        "WriteQueueToSD", 256, this, 3, &(this->write_queue_to_sd_task));    
     vTaskCoreAffinitySet(this->write_queue_to_sd_task, 0x02);
 
     // setup HMI-task
@@ -56,7 +65,7 @@ void PouchTasker::setup() {
         (TaskFunction_t)[](void* _this){
             ((PouchTasker*) _this)->update_hmi();
         },
-        "UpdateHMI", 128, this, 3, &(this->update_hmi_task));    
+        "UpdateHMI", 128, this, 1, &(this->update_hmi_task));    
     vTaskCoreAffinitySet(this->update_hmi_task, 0x02);
 
 
@@ -65,7 +74,7 @@ void PouchTasker::setup() {
         (TaskFunction_t)[](void* _this){
             ((PouchTasker*) _this)->idle_core(0);
         },
-        "IdleCore0Task", 128, this, 1, &(this->idle_core0_task));
+        "IdleCore0Task", 128, this, tskIDLE_PRIORITY, &(this->idle_core0_task));
     vTaskCoreAffinitySet(this->idle_core0_task, 0x01);
 
     // setup the idle task for core 1
@@ -87,8 +96,11 @@ void PouchTasker::poll_imu_sensor() {
 
     while(true) {
         xLastWakeTime = xTaskGetTickCount();
-
-        this->message_queue_imu.push(this->ptc->imu_sensor->get_imu_data());
+        if(this->message_queue_imu.size() < 100) {
+            this->message_queue_imu.push(this->ptc->imu_sensor->get_imu_data());
+        } else {
+            // printf("skipped adding to queue_imu!\n");
+        }
         
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(this->ptc->imu_sensor_interval));
     }
@@ -103,10 +115,23 @@ void PouchTasker::poll_environmental_sensor() {
         if(this->message_queue_env.size() < 10) {
             this->message_queue_env.push(this->ptc->env_sensor->get_environmental_data());
         } else {
-            printf("skipped adding to queue_env!\n");
+            // printf("skipped adding to queue_env!\n");
         }
         
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(this->ptc->env_sensor_interval));
+    }
+}
+
+void PouchTasker::worker_gnss_sensor() {
+    TickType_t xLastWakeTime;
+    while(true) {
+        this->ptc->gps_sensor->poll();
+        if(this->message_queue_gnss.size() < 10) {
+            this->message_queue_gnss.push(this->ptc->gps_sensor->get_fix());
+        } else {
+            // printf("skipped adding to queue_gnss!\n");
+        }
+        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(this->ptc->gps_sensor_interval));
     }
 }
 
@@ -115,11 +140,7 @@ void PouchTasker::poll_gnss_sensor() {
 
     while(true) {
         xLastWakeTime = xTaskGetTickCount();
-        
-        this->ptc->gps_sensor->poll();
 
-
-        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(this->ptc->gps_sensor_interval));
     }
 }
 
@@ -150,6 +171,7 @@ void PouchTasker::write_queue_to_sd() {
         while(!this->message_queue_env.empty()) {
             env_data = this->message_queue_env.front();
             snprintf(buffer, buffer_size-1, "ENV;%lld;%d;%d;%d\n", env_data.timestamp, env_data.temperature, env_data.humidity, env_data.pressure);
+            this->ptc->sd_file_io->write_line(buffer);
             this->message_queue_env.pop();
         }
         this->ptc->sd_file_io->flush();
@@ -165,6 +187,8 @@ void PouchTasker::update_hmi() {
 
     while(true) {
         xLastWakeTime = xTaskGetTickCount();
+
+
 
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(1000));
     }

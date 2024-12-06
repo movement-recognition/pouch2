@@ -9,8 +9,8 @@
 #include <cstdlib>
 #include <ctime>
 
-#include "GPS_NMEA.h"
 #include "IGlobalNavSatSystem.h"
+#include "GPS_NMEA.h"
 
 bool nmea_compare_msg_prefix(const char *buffer, const char *prefix) {
     bool check = true;
@@ -103,7 +103,6 @@ void GPS_NMEA::poll() {
                 return;
             } else if (!nmea_checksum(this->line_buffer,
                                       this->line_ptr)) {  // no correct checksum
-                printf("message with wrong checksum received.\n");
                 this->count_wrong_checksum++;
                 return;
             }
@@ -279,15 +278,12 @@ void GPS_NMEA::poll() {
                     std::time_t time = std::mktime(&tm);
 
                     data->true_unix_time = time;
-                    printf("%02d:%02d:%02d\n", tm.tm_hour, tm.tm_min, tm.tm_sec);
                     data->update_ts_latlon = capture_time;
                 } else {
-                    printf("recv=%d\n", receiver_status);
                 }
             } else if (nmea_compare_msg_prefix(this->line_buffer, "TXT")) {
                 // $GPTXT,01,01,02,ANTSTATUS=OPEN*2B
             } else {
-                printf("other %s\n", this->line_buffer);
             }
 
             this->line_ptr = 0;
@@ -305,7 +301,23 @@ GNSS_position GPS_NMEA::get_fix() {
     return fix;
 }
 
-uint64_t GPS_NMEA::get_timestamp() { return 0; }
+uint64_t GPS_NMEA::get_timestamp() {
+    if(this->GPS_data.true_unix_time > 0) {
+        return this->GPS_data.true_unix_time;
+    } else if(this->GALILEO_data.true_unix_time > 0) {
+        return this->GALILEO_data.true_unix_time;
+    } else {
+        return this->OTHER_data.true_unix_time;
+    }
+}
+
+uint64_t GPS_NMEA::get_message_count() {
+    if(this->count_message.count(GNSS_constellation::GPS)) {
+        return this->count_message.at(GNSS_constellation::GPS);
+    } else {
+        return 0;
+    }
+}
 
 GPS_NMEA::GNSS_raw* GPS_NMEA::get_data_field(GNSS_constellation line_constellation) {
     if (line_constellation == GNSS_constellation::GPS) {

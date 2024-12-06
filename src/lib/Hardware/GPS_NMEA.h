@@ -19,6 +19,7 @@ class GPS_NMEA: public IGlobalNavSatSystem {
         void restart();
         GNSS_position get_fix();
         uint64_t get_timestamp();
+        uint64_t get_message_count();
 
         uint64_t last_message = 0;
         std::map<GNSS_constellation, uint64_t> count_message;

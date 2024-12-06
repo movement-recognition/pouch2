@@ -39,6 +39,7 @@ class PouchTasker {
         void poll_imu_sensor();
         void poll_environmental_sensor();
         void poll_gnss_sensor();
+        void worker_gnss_sensor();
 
         void write_queue_to_sd();
 
@@ -55,7 +56,9 @@ class PouchTasker {
         TaskHandle_t poll_env_task;
         std::queue<environment_struct> message_queue_env;
 
+        TaskHandle_t worker_gnss_task;
         TaskHandle_t poll_gnss_task;
+        std::queue<GNSS_position> message_queue_gnss;
 
         TaskHandle_t write_queue_to_sd_task;
         

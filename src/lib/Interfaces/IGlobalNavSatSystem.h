@@ -20,6 +20,7 @@ class IGlobalNavSatSystem {
         virtual ~IGlobalNavSatSystem() {};
         virtual void poll();
         virtual uint64_t get_timestamp() = 0;
+        virtual uint64_t get_message_count() = 0;
         virtual GNSS_position get_fix() = 0;
 };
 

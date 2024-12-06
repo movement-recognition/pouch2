@@ -43,24 +43,6 @@ int main() {
         sleep_ms(500);
     }
 
-    GPS_NMEA foo = GPS_NMEA(uart1, 9600, 9, 8);
-    sleep_ms(10);
-    printf("while loop\n");
-    while(true) {
-        gpio_put(22, 0);
-        foo.poll();
-        gpio_put(22, 1);
-        uint64_t delta = to_us_since_boot(get_absolute_time()) - foo.last_message;
-        if(delta > 5000000 ) {
-            printf("restart delta!\n");
-            foo.restart();
-        }
-    }
-    
-    return 0;
-
-    // DEBUG
-
     // TODO: replace all new()-initializiations with unique_ptr!
 
     printf("initializing sd_card\n");
@@ -90,14 +72,11 @@ int main() {
     ptc->env_sensor_interval = 500;
     
     ptc->gps_sensor = new GPS_NMEA(uart1, 9600, 9, 8);
-    ptc->gps_sensor_interval = 50; // TODO: refine this interval as the sensors outputs data all the time!
+    ptc->gps_sensor_interval = 10000; // interal is only for adding events to the queue.
 
     ptc->sd_file_io = io_storage;
 
     printf("peripherals setup complete.\n");
-
-    // DEBUG Playground
-    // END DEBUG Playground
 
 
     printf("setup pouch tasker\n");
