@@ -11,7 +11,7 @@ struct GNSS_position {
 };
 
 enum GNSS_constellation {
-    GPS, GLONASS, BEIDOU, GALILEO, UNKNOWN
+    GPS, GLONASS, BEIDOU, GALILEO, COMBINED, UNKNOWN
 };
 
 class IGlobalNavSatSystem {
